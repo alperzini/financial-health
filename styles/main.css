@@ -91,4 +91,11 @@ body {
 .primary-nav__link {
   text-decoration: none;
   color: #038203;
+}
+
+.middle-section__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aquamarine;
 }/*# sourceMappingURL=main.css.map */
