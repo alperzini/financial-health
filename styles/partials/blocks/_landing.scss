@@ -1,3 +1,63 @@
+<<<<<<< HEAD
 @use "./../variables" as *;
 @use "./../utils" as *;
 @use "./../mixins" as *;
+=======
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+* {
+    border: 1px red solid;
+}
+
+.middle-section {
+    margin-top: 5rem;
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &__subheader {
+        color: #757575;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    &__header {
+        color: black;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.04rem;
+        margin-top: -0.2rem;
+        width: 75%;
+    }
+    &__text {
+        color: #757575;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.02rem;
+        width: 90%;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        width: 75%;
+        margin: 0 auto; /* align everything in the center */
+    }
+    &__item-icon {
+        border-radius: 3rem #038203 solid;
+    }
+}
+
+
+>>>>>>> 670f02a8ac1ae184786d4916048482aeb616a865

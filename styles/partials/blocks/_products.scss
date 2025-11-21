@@ -1,3 +1,103 @@
+<<<<<<< HEAD
 @use "./../variables" as *;
 @use "./../utils" as *;
 @use "./../mixins" as *;
+=======
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.card__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: pxToRem(48) pxToRem(16);
+
+    @include tablet {
+        padding: pxToRem(64) pxToRem(40);
+    }
+
+    @include desktop {
+        padding: pxToRem(80) pxToRem(120);
+    }
+}
+
+.product-intro {
+    text-align: center;
+    margin: 0 auto pxToRem(24);
+
+    &__title {
+        font-weight: 700;
+        font-size: pxToRem(28);
+        color: $color-neutral-900;
+
+        @include tablet {
+            font-size: pxToRem(36);
+        }
+
+        @include desktop {
+            font-size: pxToRem(48);
+        }
+    }
+
+    &__details {
+        font-size: pxToRem(16);
+        font-weight: 400;
+        color: $color-neutral-300;
+
+        @include tablet {
+            font-size: pxToRem(18);
+        }
+
+        @include desktop {
+            font-size: pxToRem(20);
+        }
+    }
+}
+
+.product {
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: pxToRem(48);
+        width: 100%;
+
+        @include tablet {
+            margin-bottom: pxToRem(64);
+        }
+
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-start;
+            text-align: left;
+            margin-bottom: pxToRem(80);
+        }
+
+        /* Alternating Layout Logic: ONLY applies on desktop */
+        &:nth-child(even) {
+            @include desktop {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+>>>>>>> 670f02a8ac1ae184786d4916048482aeb616a865
