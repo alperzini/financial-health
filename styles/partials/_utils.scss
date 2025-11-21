@@ -1,0 +1,9 @@
+%wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@function pxToRem($target, $base: 16) {
+    @return calc($target / $base) + rem;
+}

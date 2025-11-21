@@ -1,2 +1,1 @@
-# sample
-# git-lab
+# industry-sprint-1
