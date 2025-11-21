@@ -8,7 +8,8 @@ async function register () {
 
 
 
-const apiKey = await register ()
+export const apiKey = await register ()
+
 const apiUrl = `https://industry-sprint-api-365b460ef11e.herokuapp.com/products?api_key=${apiKey}`
 
 
