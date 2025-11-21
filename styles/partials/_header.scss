@@ -1,9 +1,9 @@
 @use "./variables" as *;
 @use "./utils" as *;
+@use "./mixins" as *;
 
 .site-header {
     background: #D9D9D9;
-    margin: pxToRem(0) pxToRem(285);
     padding: pxToRem(0) pxToRem(15);
 
     &__logo {
@@ -12,14 +12,14 @@
             height: auto;
         }
     }
-}
 
-.site-header__wrapper {
-    @extend %wrapper;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
+    &__wrapper {
+        @extend %wrapper;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+    }
 }
 
 .primary-nav {
@@ -28,7 +28,13 @@
         display: flex;
         margin: 0;
         padding: 0;
-        gap: 53px;
+        gap: pxToRem(5);
+        @include tablet {
+            gap: pxToRem(10);
+        }
+        @include desktop {
+            gap: pxToRem(53);
+        }
     }
     &__link {
         text-decoration: none;

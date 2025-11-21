@@ -1,0 +1,29 @@
+@use "./variables" as *;
+@use "./utils" as *;
+@use "./mixins" as *;
+
+.site-footer {
+    background: $color-secondary-green;
+    color: $color-neutral-white;
+    margin: pxToRem(0) pxToRem(0);
+    padding: pxToRem(64) pxToRem(120);
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        gap: pxToRem(48);
+        &--social {
+            gap: pxToRem(15);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-neutral-white;
+    }
+}
