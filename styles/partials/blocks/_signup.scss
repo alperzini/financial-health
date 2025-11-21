@@ -1,3 +1,65 @@
-@use "../variables" as *;
-@use "../utils" as *;
-@use "../mixins" as *;
+@use "./../variables" as *;
+@use "./../utils" as *;
+@use "./../mixins" as *;
+@use "./../fonts" as *;
+
+.signup-page {
+    background-color: $color-tertiary-green;
+    display: flex;
+    padding: 128px 233px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &__container {
+        color: $color-neutral-white;
+        text-align: center;
+    }
+    
+}
+
+.signup-form {
+    &__container {
+        background-color: $color-neutral-white;
+        display: flex;
+        padding: pxToRem(50) pxToRem(20);
+        flex-direction: column;
+        justify-content: center;
+        align-self: stretch;
+        gap: 26px;
+        @include tablet {
+            padding: pxToRem(50) pxToRem(100);
+        }
+        @include desktop {
+            padding: pxToRem(82.5) pxToRem(214);
+        }
+    }
+    &__input-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        &--green {
+            border-radius: 4px;
+            background: $color-tertiary-green;
+            border-radius: 4px;
+            border: $color-neutral-white;
+            color: $color-neutral-white;
+            padding: pxToRem(8) pxToRem(80);
+        }
+    }
+}
+
+input {
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--Colors-Neutral-200, #CCC);
+    background: var(--Colors-Neutral-White, #FFF);
+    @include desktop {
+        width: pxToRem(344);
+    }
+}
