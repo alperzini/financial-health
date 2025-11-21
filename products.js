@@ -14,7 +14,7 @@ const apiUrl = `https://industry-sprint-api-365b460ef11e.herokuapp.com/products?
 
 
 
-//http://industry-sprint-api-365b460ef11e.herokuapp.com/features?api_key=
+//http://industry-sprint-api-365b460ef11e.herokuapp.com/products?api_key=
 
 async function getProducts () {
     console.log('runs')
@@ -30,7 +30,7 @@ async function getProducts () {
 const data = await getProducts()
 
 async function displayProducts () {
-    const productsList = document.getElementById('products-list')
+    const productList = document.getElementsByClassName('card__wrapper')[0]
      
     for (const element of data)  {
       
@@ -41,18 +41,41 @@ async function displayProducts () {
         const description = element.description.paragraph
         const bulletPoints = element.description.bulletPoints
         
+        const productContent = document.createElement('article')
+        productContent.id = id
         const productDiv = document.createElement('div')
-        productDiv.id = id
+        productDiv.classList.add('product__content')
+        const title = document.createElement('h3')
+        title.classList.add('product__title')
+        productDiv.appendChild(title)
+        title.innerHTML = `TEST-${name}`
+    
         const productImage= document.createElement('img')
+        productImage.classList.add('product__image')
         productDiv.appendChild(productImage)    
         productImage.src = image
-        const productName = document.createElement('h2')
-        productsList.appendChild(productName)
-        productName.innerHTML = name
+
+        const productDescription = document.createElement('p')
+        productDescription.classList.add('product__details')
+        productDescription.innerHTML =description
+        productDiv.appendChild(productDescription)
+
+        const productPoints = document.createElement('ul')
+        productPoints.classList.add('product__points')
+        productDiv.appendChild(productPoints)
+
+        bulletPoints.forEach((element) => {
+            console.log(element)
+            const bullet = document.createElement('li')
+            bullet.innerHTML = element
+            productPoints.appendChild(bullet)
+        })
+        
+        
         console.log('THIS IS THE URL:',image)
 
 
-        productsList.appendChild(productDiv)
+        productList.appendChild(productDiv)
         console.log(name,image, description, bulletPoints)
     }
     
