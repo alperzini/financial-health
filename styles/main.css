@@ -93,6 +93,37 @@ body {
   color: #038203;
 }
 
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  gap: 1rem;
+}
+.button-group__signup-link {
+  font-style: none;
+  text-decoration: none;
+}
+.button-group__signup-link__button {
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #038203;
+  color: azure;
+  border: #038203 1px solid;
+}
+.button-group__learnmore-link {
+  font-style: none;
+  text-decoration: none;
+}
+.button-group__learnmore-link__button {
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: black;
+  border: #fff 1px solid;
+  font-weight: bold;
+}
+
 * {
   border: 1px red solid;
 }
@@ -107,10 +138,11 @@ body {
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  margin-bottom: 3rem;
 }
 .middle-section__subheader {
   color: #757575;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -118,7 +150,7 @@ body {
 }
 .middle-section__header {
   color: black;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.04rem;
   margin-top: -0.2rem;
@@ -143,4 +175,55 @@ body {
 }
 .middle-section__item-icon {
   border-radius: 3rem #038203 solid;
+}
+.middle-section__item-header {
+  color: #003F2D;
+  font-size: 1.4rem;
+  font-style: 700;
+  line-height: normal;
+  letter-spacing: 0.02rem;
+}
+.middle-section__item-text {
+  color: #757575;
+  line-height: 1.2rem;
+  letter-spacing: 0.04rem;
+}
+
+.financial-beta {
+  background-color: #f9f9f9;
+  padding: 3rem 2rem;
+}
+.financial-beta__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.financial-beta__subheader {
+  color: #757575;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.financial-beta__header {
+  color: #1c1c1c;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  margin-top: -0.2rem;
+  width: 100%;
+  margin: 0 auto; /* align everything in the center */
+}
+.financial-beta__text {
+  color: #757575;
+  padding-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  width: 90%;
+  padding-bottom: 2rem;
+  margin: 0 auto; /* align everything in the center */
 }/*# sourceMappingURL=main.css.map */

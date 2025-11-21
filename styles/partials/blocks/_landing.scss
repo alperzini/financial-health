@@ -1,10 +1,13 @@
 @use "../variables" as *;
 @use "../utils" as *;
 @use "../mixins" as *;
+@use "../button" as *;
+
 
 * {
     border: 1px red solid;
 }
+
 
 .middle-section {
     margin-top: 5rem;
@@ -15,10 +18,11 @@
         text-align: center;
         padding-left: 2rem;
         padding-right: 2rem;
+        margin-bottom: 3rem;
     }
     &__subheader {
         color: #757575;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -26,7 +30,7 @@
     }
     &__header {
         color: black;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 700;
         letter-spacing: 0.04rem;
         margin-top: -0.2rem;
@@ -52,6 +56,59 @@
     &__item-icon {
         border-radius: 3rem #038203 solid;
     }
+    &__item-header {
+        color: #003F2D;
+        font-size: 1.4rem;
+        font-style: 700;
+        line-height: normal;
+        letter-spacing: 0.02rem;
+    }
+    &__item-text {
+        color:#757575;
+        line-height: 1.2rem;
+        letter-spacing: 0.04rem;
+    }
 }
+
+.financial-beta {
+    background-color: #f9f9f9;
+    padding:3rem 2rem;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    &__subheader {
+        color: #757575;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    &__header {
+        color: #1c1c1c;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 0.04rem;
+        margin-top: -0.2rem;
+        width: 100%;
+        margin: 0 auto; /* align everything in the center */
+    }
+    &__text {
+        color: #757575;
+        padding-top: 0.6rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.02rem;
+        width: 90%;
+        padding-bottom: 2rem;
+        margin: 0 auto; /* align everything in the center */
+    }
+}
+
+
 
 
