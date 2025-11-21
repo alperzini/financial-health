@@ -33,16 +33,37 @@ body {
   margin: 0 auto;
 }
 
+.site-footer {
+  background: #003f2d;
+  color: white;
+  margin: 0rem 0rem;
+  padding: 4rem 7.5rem;
+}
+.site-footer__wrapper {
+  display: flex;
+}
+.site-footer__list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.site-footer__list--social {
+  gap: 0.9375rem;
+}
+.site-footer__link {
+  text-decoration: none;
+  color: white;
+}
+
 .site-header {
   background: #D9D9D9;
-  margin: 0rem 17.8125rem;
   padding: 0rem 0.9375rem;
 }
 .site-header__logo img {
   width: 2.8125rem;
   height: auto;
 }
-
 .site-header__wrapper {
   display: flex;
   align-items: center;
@@ -55,7 +76,17 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 53px;
+  gap: 0.3125rem;
+}
+@media screen and (min-width: 768px) {
+  .primary-nav__list {
+    gap: 0.625rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .primary-nav__list {
+    gap: 3.3125rem;
+  }
 }
 .primary-nav__link {
   text-decoration: none;
