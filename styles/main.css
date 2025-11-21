@@ -155,4 +155,18 @@ input {
   input {
     width: 21.5rem;
   }
+}
+
+select {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Colors-Neutral-200, #CCC);
+  background: var(--Colors-Neutral-White, #FFF);
+}
+@media screen and (min-width: 1200px) {
+  select {
+    width: 21.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
