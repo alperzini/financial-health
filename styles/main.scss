@@ -5,4 +5,10 @@
 @use "./partials/mixins";
 @use "./partials/utils";
 @use "./partials/variables";
+@use "./partials/blocks/confirmation";
+@use "./partials/blocks/landing";
 @use "./partials/blocks/products";
+@use "./partials/blocks/responses";
+@use "./partials/blocks/signup";
+
+
