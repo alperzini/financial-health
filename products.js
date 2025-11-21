@@ -71,6 +71,21 @@ async function displayProducts () {
             productPoints.appendChild(bullet)
         })
         
+        const tags = document.createElement('div')
+        tags.classList.add('product__tags')
+        productDiv.appendChild(tags)
+
+        const learnButton = document.createElement('button')
+        tags.appendChild(learnButton)    
+        learnButton.classList.add('cta-button')
+        learnButton.innerHTML = 'Learn More'
+        learnButton.href ='#'
+
+        const secondButton = document.createElement('button')
+        secondButton.id = element.id
+        tags.appendChild(secondButton)
+        
+        
         
         console.log('THIS IS THE URL:',image)
 
@@ -78,7 +93,17 @@ async function displayProducts () {
         productList.appendChild(productDiv)
         console.log(name,image, description, bulletPoints)
     }
+     
+    const financialPulseButton = document.getElementById('R3K9LT')
+    financialPulseButton.innerHTML = "Something Divya wrote"
+
+    const finanicalHealthButton = document.getElementById('M8F2QY')
+    finanicalHealthButton.innerHTML = 'Real your Financial Health Score'
+
+    const smartAlertsButton = document.getElementById('B9X3JE')
+    smartAlertsButton.innerHTML = 'Get smart budget alerts instantly'
     
+
 }
 
 
