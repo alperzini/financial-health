@@ -1,5 +1,5 @@
 const apiUrl = "https://industry-sprint-api-365b460ef11e.herokuapp.com/";
-const apiKey = "e9731023-5287-4340-9b98-22aada555c9c";
+import { apiKey } from "../products.js";
 
 const form = document.getElementById("form");
 
