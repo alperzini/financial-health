@@ -1,4 +1,5 @@
-// import {apiKey} from "./products";
+import {apiKey} from "../scripts/config.js";
+import axios from "https://esm.sh/axios@1.7.7";
 
 // dropdown fields for audience situation and income
 
@@ -88,23 +89,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // event listener for form submissions
 
-// const apiUrl = "https://industry-sprint-api-365b460ef11e.herokuapp.com/";
+const apiUrl = "https://industry-sprint-api-365b460ef11e.herokuapp.com";
+console.log(apiKey)
+const form = document.getElementsByClassName("signup-form")[0];
+console.log(form)
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    console.log(event.target.firstName.value);
+    const today = new Date();
+const formattedDate = today.toLocaleDateString("en-US");
+    const newSignup = {
+        firstName: event.target.firstName.value,
+        lastName: event.target.lastName.value,
+        email: event.target.email.value,
+        
+    }
+    postSignupData(newSignup);
+})
 
-// const form = document.getElementById("form");
+async function postSignupData(signupObject){
+    console.log(signupObject);
+    const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
+    console.log("POST data:", response.data);
+}
 
-// form.addEventListener("submit", function(event){
-//     event.preventDefault();
-//     console.log(event.target.firstName.value);
-
-//     const newSignup = {
-//         firstName: event.target.firstName.value,
-//         lastName: event.target.lastName.value,
-//         email: event.target.email.value,
-//     }
-//     postSignupData(newSignup);
-// })
-
-// async function postSignupData(signupObject){
-//     console.log(signupObject);
-//     const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
-// }

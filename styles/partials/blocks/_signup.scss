@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+
     &__container {
         color: $color-neutral-white;
         text-align: center;
@@ -34,10 +35,13 @@
             padding: pxToRem(82.5) pxToRem(214);
         }
     }
+
     &__input-wrapper {
         display: flex;
         flex-direction: column;
+        gap: pxToRem(8);
     }
+
     &__button {
         display: flex;
         justify-content: center;
@@ -50,28 +54,31 @@
             padding: pxToRem(8) pxToRem(80);
         }
     }
-}
 
-input {
-    display: flex;
-    padding: 12px;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--Colors-Neutral-200, #CCC);
-    background: var(--Colors-Neutral-White, #FFF);
-    @include desktop {
-        width: pxToRem(344);
+    &__input,
+    &__input-wrapper select {
+        display: flex;
+        padding: 12px;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $color-neutral-200;
+        background: $color-neutral-white;
+        @include desktop {
+            width: pxToRem(344);
+        }
+
+        &:hover {
+            border: 1px solid $color-tertiary-green;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $color-tertiary-green;
+            border-bottom: 3px solid $color-tertiary-green;
+        }
     }
 }
 
-select {
-    display: flex;
-    padding: 12px;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--Colors-Neutral-200, #CCC);
-    background: var(--Colors-Neutral-White, #FFF);
-    @include desktop {
-        width: pxToRem(344);
-    }
+.dropdown-label {
+    color: $color-neutral-black;
 }
