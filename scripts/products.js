@@ -1,10 +1,10 @@
 import axios from "https://esm.sh/axios@1.7.7";
+import { apiKey } from "../scripts/config.js";
 
 
 
 
 
-export const apiKey = 'b89b7bdb-00d9-4a8a-805d-25231152ac36'
 const apiUrl = `https://industry-sprint-api-365b460ef11e.herokuapp.com/products?api_key=${apiKey}`
 
 
@@ -13,7 +13,7 @@ const apiUrl = `https://industry-sprint-api-365b460ef11e.herokuapp.com/products?
 //http://industry-sprint-api-365b460ef11e.herokuapp.com/products?api_key=
 
 async function getProducts() {
-    console.log('runs')
+    
 
     const getRes = await axios.get(apiUrl);
     return (getRes.data)
@@ -27,10 +27,10 @@ const data = await getProducts()
 
 async function displayProducts() {
     const productList = document.getElementsByClassName('card__wrapper')[0]
-    console.log(productList)
+    
     for (const element of data) {
 
-        console.log(element)
+       
         const id = element.id
         const name = element.name
         const image = `https://industry-sprint-api-365b460ef11e.herokuapp.com${element.image}`
@@ -103,4 +103,6 @@ async function displayProducts() {
 }
 
 
-displayProducts()
+document.addEventListener('DOMContentLoaded', () => {
+    displayProducts()
+})
