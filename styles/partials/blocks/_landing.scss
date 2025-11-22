@@ -1,13 +1,19 @@
 @use "../variables" as *;
 @use "../utils" as *;
 @use "../mixins" as *;
+@use "../button" as *;
 
+/*
 * {
     border: 1px red solid;
 }
+*/
+
 
 .middle-section {
     margin-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     &__top {
         display: flex;
         flex-direction: column;
@@ -15,10 +21,11 @@
         text-align: center;
         padding-left: 2rem;
         padding-right: 2rem;
+        margin-bottom: 3rem;
     }
     &__subheader {
         color: #757575;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -26,32 +33,124 @@
     }
     &__header {
         color: black;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         letter-spacing: 0.04rem;
-        margin-top: -0.2rem;
         width: 75%;
     }
     &__text {
         color: #757575;
         font-size: 1rem;
         font-weight: 400;
+        margin-top: -0.5rem;
         line-height: 1.5rem;
         letter-spacing: 0.02rem;
-        width: 90%;
+        width: 75%;
     }
     &__cards {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 2rem;
         width: 75%;
         margin: 0 auto; /* align everything in the center */
+
     }
     &__item-icon {
-        border-radius: 3rem #038203 solid;
+        background-color: #eceeec;
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+    &__item-header {
+        color: #003F2D;
+        font-size: 1.4rem;
+        font-style: 700;
+        line-height: normal;
+        letter-spacing: 0.02rem;
+    }
+    &__item-text {
+        color:#757575;
+        font-size: 1rem;
+        line-height: 150%;
+        letter-spacing: 0.04rem;
+        margin-top: -0.06rem;
+    }
+    @media screen and (min-width: 768px) {
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  // 2 columns
+            gap: 2rem;
+            width: 100%;
+            justify-items: center;
+        }
+
+        &__item {
+            width: 90%;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        &__header {
+            width: 75%;
+        }
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  // 2 columns
+            gap: 2rem;
+            width: 100%;
+            justify-items: center;
+        }
+        &__item {
+            width: 75%;
+        }
+        &__item-text {
+            width: 80%;
+        }
     }
 }
+
+.financial-beta {
+    background-color: #f9f9f9;
+    padding:3rem 2rem;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    &__subheader {
+        color: #757575;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    &__header {
+        color: #1c1c1c;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.06rem;
+        width: 100%;
+        margin: 0 auto; /* align everything in the center */
+    }
+    &__text {
+        color: #757575;
+        padding-top: 0.6rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.02rem;
+        width: 90%;
+        padding-bottom: 2rem;
+        margin: 0 auto; /* align everything in the center */
+    }
+}
+
+
 
 
