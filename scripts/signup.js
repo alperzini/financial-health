@@ -96,11 +96,12 @@ console.log(form)
 form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(event.target.firstName.value);
-
+    
     const newSignup = {
         firstName: event.target.firstName.value,
         lastName: event.target.lastName.value,
         email: event.target.email.value,
+        
     }
     postSignupData(newSignup);
 })
@@ -109,5 +110,11 @@ async function postSignupData(signupObject){
     console.log(signupObject);
     const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
     console.log("POST data:", response.data);
+    redirect('confirmation.html')
 }
 
+function redirect(targetpage) {
+  console.log("redirect");
+  const currentPage = encodeURI(window.location.href);
+  window.location.href = `${targetpage}?source=${currentPage}`;
+}

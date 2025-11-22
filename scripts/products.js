@@ -26,8 +26,8 @@ async function getProducts() {
 const data = await getProducts()
 
 async function displayProducts() {
-    const productList = document.getElementsByClassName('product-intro')[0]
-    
+    const productList = document.getElementsByClassName('card__wrapper')[0]
+    console.log(productList)
     for (const element of data) {
 
        
@@ -61,7 +61,7 @@ async function displayProducts() {
         productDiv.appendChild(productPoints)
 
         bulletPoints.forEach((element) => {
-            console.log(element)
+            
             const bullet = document.createElement('li')
             bullet.innerHTML = element
             productPoints.appendChild(bullet)
@@ -83,11 +83,8 @@ async function displayProducts() {
 
 
 
-        console.log('THIS IS THE URL:', image)
-
-
         productList.appendChild(productDiv)
-        console.log(name, image, description, bulletPoints)
+       
     }
 
     const financialPulseButton = document.getElementById('R3K9LT')
@@ -103,6 +100,5 @@ async function displayProducts() {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
+
     displayProducts()
-})
