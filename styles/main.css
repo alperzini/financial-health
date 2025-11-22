@@ -124,12 +124,15 @@ body {
   font-weight: bold;
 }
 
+/*
 * {
-  border: 1px red solid;
+    border: 1px red solid;
 }
-
+*/
 .middle-section {
   margin-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .middle-section__top {
   display: flex;
@@ -150,31 +153,37 @@ body {
 }
 .middle-section__header {
   color: black;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.04rem;
-  margin-top: -0.2rem;
   width: 75%;
 }
 .middle-section__text {
   color: #757575;
   font-size: 1rem;
   font-weight: 400;
+  margin-top: -0.5rem;
   line-height: 1.5rem;
   letter-spacing: 0.02rem;
-  width: 90%;
+  width: 75%;
 }
 .middle-section__cards {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+.middle-section__item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 2rem;
   width: 75%;
   margin: 0 auto; /* align everything in the center */
 }
 .middle-section__item-icon {
-  border-radius: 3rem #038203 solid;
+  background-color: #eceeec;
+  border-radius: 2rem;
+  padding: 1rem;
 }
 .middle-section__item-header {
   color: #003F2D;
@@ -185,8 +194,40 @@ body {
 }
 .middle-section__item-text {
   color: #757575;
-  line-height: 1.2rem;
+  font-size: 1rem;
+  line-height: 150%;
   letter-spacing: 0.04rem;
+  margin-top: -0.06rem;
+}
+@media screen and (min-width: 768px) {
+  .middle-section__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
+  }
+  .middle-section__item {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .middle-section__header {
+    width: 75%;
+  }
+  .middle-section__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
+  }
+  .middle-section__item {
+    width: 75%;
+  }
+  .middle-section__item-text {
+    width: 80%;
+  }
 }
 
 .financial-beta {
@@ -209,10 +250,9 @@ body {
 }
 .financial-beta__header {
   color: #1c1c1c;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.04rem;
-  margin-top: -0.2rem;
+  letter-spacing: 0.06rem;
   width: 100%;
   margin: 0 auto; /* align everything in the center */
 }
