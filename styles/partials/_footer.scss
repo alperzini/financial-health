@@ -104,6 +104,17 @@
         }
     }
 
+        &__regulatory-wrapper {
+        display: flex;
+        align-items: center;
+        gap: pxToRem(15); 
+
+        img {
+            height: pxToRem(48); 
+            width: auto;
+        }
+    }
+
     &__link {
         text-decoration: none;
         color: $color-neutral-white;

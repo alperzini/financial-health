@@ -130,6 +130,15 @@ body {
     gap: 0;
   }
 }
+.site-footer__regulatory-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.site-footer__regulatory-wrapper img {
+  height: 3rem;
+  width: auto;
+}
 .site-footer__link {
   text-decoration: none;
   color: white;
