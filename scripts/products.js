@@ -44,7 +44,7 @@ async function displayProducts() {
         const title = document.createElement('h3')
         title.classList.add('product__title')
         productDiv.appendChild(title)
-        title.innerHTML = `TEST-${name}`
+        title.innerHTML = `${name}`
 
         const productImage = document.createElement('img')
         productImage.classList.add('product__image')
