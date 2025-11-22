@@ -93,33 +93,206 @@ body {
   color: #038203;
 }
 
-.signup-page {
-  background-color: #038203;
+.button-group {
   display: flex;
-  padding: 128px 233px;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  justify-items: center;
+  gap: 1rem;
 }
-.signup-page__container {
-  color: white;
-  text-align: center;
+.button-group__signup-link {
+  font-style: none;
+  text-decoration: none;
+}
+.button-group__signup-link__button {
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #038203;
+  color: azure;
+  border: #038203 1px solid;
+}
+.button-group__learnmore-link {
+  font-style: none;
+  text-decoration: none;
+}
+.button-group__learnmore-link__button {
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: black;
+  border: #fff 1px solid;
+  font-weight: bold;
 }
 
-.signup-form__container {
-  background-color: white;
+/*
+* {
+    border: 1px red solid;
+}
+*/
+.middle-section {
+  margin-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.middle-section__top {
   display: flex;
-  padding: 3.125rem 1.25rem;
   flex-direction: column;
-  justify-content: center;
-  align-self: stretch;
-  gap: 26px;
+  align-items: center;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 3rem;
+}
+.middle-section__subheader {
+  color: #757575;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.middle-section__header {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  width: 75%;
+}
+.middle-section__text {
+  color: #757575;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: -0.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  width: 75%;
+}
+.middle-section__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.middle-section__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 75%;
+  margin: 0 auto; /* align everything in the center */
+}
+.middle-section__item-icon {
+  background-color: #eceeec;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+.middle-section__item-header {
+  color: #003F2D;
+  font-size: 1.4rem;
+  font-style: 700;
+  line-height: normal;
+  letter-spacing: 0.02rem;
+}
+.middle-section__item-text {
+  color: #757575;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0.04rem;
+  margin-top: -0.06rem;
 }
 @media screen and (min-width: 768px) {
-  .signup-form__container {
-    padding: 3.125rem 6.25rem;
+  .middle-section__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
   }
+  .middle-section__item {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .middle-section__header {
+    width: 75%;
+  }
+  .middle-section__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
+  }
+  .middle-section__item {
+    width: 75%;
+  }
+  .middle-section__item-text {
+    width: 80%;
+  }
+}
+.product__tags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px auto;
+}
+@media screen and (min-width: 768px) {
+  .product__tags {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__tags {
+    flex-direction: row;
+  }
+}
+.product__tags button {
+  background-color: #038203;
+  color: white;
+  border-color: #038203;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.product__tags .cta-button {
+  background-color: white;
+  color: #038203;
+  border-color: #038203;
+}
+.product__tags .cta-button:hover {
+  background-color: #d9d9d9;
+}
+
+.financial-beta {
+  background-color: #f9f9f9;
+  padding: 3rem 2rem;
+}
+.financial-beta__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.financial-beta__subheader {
+  color: #757575;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.financial-beta__header {
+  color: #1c1c1c;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.06rem;
+  width: 100%;
+  margin: 0 auto; /* align everything in the center */
 }
 @media screen and (min-width: 1200px) {
   .signup-form__container {
@@ -155,4 +328,28 @@ input {
   input {
     width: 21.5rem;
   }
+}
+
+select {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Colors-Neutral-200, #CCC);
+  background: var(--Colors-Neutral-White, #FFF);
+}
+@media screen and (min-width: 1200px) {
+  select {
+    width: 21.5rem;
+  }
+.financial-beta__text {
+  color: #757575;
+  padding-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  width: 90%;
+  padding-bottom: 2rem;
+  margin: 0 auto; /* align everything in the center */
 }/*# sourceMappingURL=main.css.map */

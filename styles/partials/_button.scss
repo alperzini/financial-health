@@ -1,0 +1,34 @@
+@use "./variables" as *;
+@use "./utils" as *;
+@use "./mixins" as *;
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    gap: 1rem;
+    &__signup-link {
+        font-style: none;
+        text-decoration: none;
+    }
+    &__signup-link__button {
+        padding: 0.8rem 1rem;
+        border-radius: 0.4rem;
+        background-color: #038203;
+        color: azure;
+        border: #038203 1px solid;
+    }
+    &__learnmore-link {
+        font-style: none;
+        text-decoration: none;
+    }
+    &__learnmore-link__button {
+        padding: 0.8rem 1rem;
+        border-radius: 0.4rem;
+        background-color: #fff;
+        color: black;
+        border: #fff 1px solid;
+        font-weight: bold;
+    }
+}

@@ -63,3 +63,15 @@ input {
         width: pxToRem(344);
     }
 }
+
+select {
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--Colors-Neutral-200, #CCC);
+    background: var(--Colors-Neutral-White, #FFF);
+    @include desktop {
+        width: pxToRem(344);
+    }
+}
