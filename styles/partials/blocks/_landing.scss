@@ -14,6 +14,7 @@
     margin-top: 5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-bottom: 5rem;
     &__top {
         display: flex;
         flex-direction: column;
@@ -46,7 +47,15 @@
         line-height: 1.5rem;
         letter-spacing: 0.02rem;
         width: 75%;
+    }   
+    @media screen and (min-width: 1200px) {
+        &__header {
+            width: 75%;
+        }
     }
+}
+
+.feature {
     &__cards {
         display: flex;
         flex-direction: column;
@@ -62,14 +71,16 @@
 
     }
     &__item-icon {
-        background-color: #eceeec;
-        border-radius: 2rem;
-        padding: 1rem;
+        background-color: #F6FAF0;
+        border-radius: 8rem;
+        padding: 2rem;
+        scale: 30%;
     }
     &__item-header {
         color: #003F2D;
         font-size: 1.4rem;
         font-style: 700;
+        margin-top: -4rem;
         line-height: normal;
         letter-spacing: 0.02rem;
     }
