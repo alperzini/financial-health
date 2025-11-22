@@ -93,6 +93,32 @@ body {
   color: #038203;
 }
 
+.confirmation-page {
+  background-color: #038203;
+  display: flex;
+  padding: 128px 233px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.confirmation-page__hero {
+  color: white;
+}
+.confirmation-page__container {
+  background-color: white;
+  display: flex;
+  padding: 3.125rem 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  gap: 26px;
+}
+.confirmation-page__title {
+  color: #003f2d;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;
