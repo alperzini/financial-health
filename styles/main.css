@@ -294,6 +294,54 @@ body {
   width: 100%;
   margin: 0 auto; /* align everything in the center */
 }
+@media screen and (min-width: 1200px) {
+  .signup-form__container {
+    padding: 5.15625rem 13.375rem;
+  }
+}
+.signup-form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.signup-form__button {
+  display: flex;
+  justify-content: center;
+}
+.signup-form__button--green {
+  border-radius: 4px;
+  background: #038203;
+  border-radius: 4px;
+  border: white;
+  color: white;
+  padding: 0.5rem 5rem;
+}
+
+input {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Colors-Neutral-200, #CCC);
+  background: var(--Colors-Neutral-White, #FFF);
+}
+@media screen and (min-width: 1200px) {
+  input {
+    width: 21.5rem;
+  }
+}
+
+select {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Colors-Neutral-200, #CCC);
+  background: var(--Colors-Neutral-White, #FFF);
+}
+@media screen and (min-width: 1200px) {
+  select {
+    width: 21.5rem;
+  }
 .financial-beta__text {
   color: #757575;
   padding-top: 0.6rem;
