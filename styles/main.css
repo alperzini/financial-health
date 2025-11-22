@@ -119,6 +119,10 @@ body {
   color: #003f2d;
 }
 
+.icon__checkmark {
+  width: 3.75rem;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;

@@ -30,3 +30,9 @@
         color: $color-secondary-green;
     }
 }
+
+.icon {
+    &__checkmark {
+        width: pxToRem(60);
+    }
+}
