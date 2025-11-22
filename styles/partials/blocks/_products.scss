@@ -2,6 +2,82 @@
 @use "../utils" as *;
 @use "../mixins" as *;
 
+.hero-banner {
+    height: 50vh;
+    min-height: 400px;
+    width: 100%;
+    background-image: url('../../../assets/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include tablet {
+        height: 60vh;
+    }
+
+    @include desktop {
+        height: 70vh;
+    }
+}
+
+.hero__content {
+    padding: 0 pxToRem(20);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.hero__title {
+    font-size: pxToRem(32);
+
+    @include tablet {
+        font-size: pxToRem(48);
+    }
+
+    @include desktop {
+        font-size: pxToRem(64);
+    }
+}
+
+.hero__link {
+    display: flex;
+    flex-direction: column;
+    gap: pxToRem(10);
+    justify-content: center;
+
+    @include desktop {
+        flex-direction: row;
+    }
+}
+
+.cta__join {
+    text-decoration: none;
+    border-radius: pxToRem(8);
+    border: 1px solid $color-tertiary-green;
+    background-color: $color-tertiary-green;
+    color: white;
+    line-height: 100%;
+    font-size: pxToRem(17);
+    font-size: 700;
+    padding: pxToRem(16) pxToRem(32)
+}
+
+.cta-button {
+    text-decoration: none;
+    border-radius: pxToRem(8);
+    border: 1px solid white;
+    color: $color-neutral-900;
+    background-color: white;
+    font-size: pxToRem(17);
+    font-size: 700;
+    padding: pxToRem(16) pxToRem(32)
+}
+
 .card__wrapper {
     display: flex;
     flex-direction: column;
@@ -56,7 +132,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px 10px;
+        padding: pxToRem(20) pxToRem(10);
         width: 100%;
         height: auto;
         object-fit: contain;
@@ -92,6 +168,48 @@
             @include desktop {
                 flex-direction: row-reverse;
             }
+        }
+    }
+
+    &__title {
+        font-size: pxToRem(24);
+        font-weight: 700;
+        color: $color-neutral-900;
+
+        @include tablet {
+            font-size: pxToRem(28);
+        }
+
+        @include desktop {
+            font-size: (32);
+        }
+    }
+
+    &__details {
+        font-size: pxToRem(16);
+        font-weight: 400;
+        color: $color-neutral-300;
+
+        @include tablet {
+            font-size: pxToRem(18);
+        }
+
+        @include desktop {
+            font-size: pxToRem(20);
+        }
+    }
+
+    &__points {
+        font-size: pxToRem(16);
+        font-weight: 400;
+        color: $color-neutral-300;
+
+        @include tablet {
+            font-size: pxToRem(18);
+        }
+
+        @include desktop {
+            font-size: pxToRem(20);
         }
     }
 }
