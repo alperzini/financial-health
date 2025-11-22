@@ -1,5 +1,7 @@
 // import {apiKey} from "./products";
 
+// dropdown fields for audience situation and income
+
 const audience = [
     {id: "audience1", name: "Student", value: "Student"},
     {id: "audience2", name: "Retiree / Soon-to-be Retirees", value: "Retiree / Soon-to-be Retirees"},
@@ -30,6 +32,12 @@ function populateAudience(data) {
     });
 
     audienceWrapper.appendChild(selectElement);
+
+    const labelElement = document.createElement('label');
+    labelElement.setAttribute('for', 'audience');
+    labelElement.textContent = 'Select your situation';
+    labelElement.classList.add('dropdown-label'); 
+    audienceWrapper.appendChild(labelElement);
 };
 
 const income = [
@@ -65,6 +73,12 @@ function populateIncome(data) {
     });
 
     incomeWrapper.appendChild(selectElement);
+
+    const labelElement = document.createElement('label');
+    labelElement.setAttribute('for', 'income');
+    labelElement.textContent = 'Select your income';
+    labelElement.classList.add('dropdown-label'); 
+    incomeWrapper.appendChild(labelElement);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,23 +86,25 @@ document.addEventListener('DOMContentLoaded', () => {
     populateIncome(income);
 });
 
-const apiUrl = "https://industry-sprint-api-365b460ef11e.herokuapp.com/";
+// event listener for form submissions
 
-const form = document.getElementById("form");
+// const apiUrl = "https://industry-sprint-api-365b460ef11e.herokuapp.com/";
 
-form.addEventListener("submit", function(event){
-    event.preventDefault();
-    console.log(event.target.firstName.value);
+// const form = document.getElementById("form");
 
-    const newSignup = {
-        firstName: event.target.firstName.value,
-        lastName: event.target.lastName.value,
-        email: event.target.email.value,
-    }
-    postSignupData(newSignup);
-})
+// form.addEventListener("submit", function(event){
+//     event.preventDefault();
+//     console.log(event.target.firstName.value);
 
-async function postSignupData(signupObject){
-    console.log(signupObject);
-    const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
-}
+//     const newSignup = {
+//         firstName: event.target.firstName.value,
+//         lastName: event.target.lastName.value,
+//         email: event.target.email.value,
+//     }
+//     postSignupData(newSignup);
+// })
+
+// async function postSignupData(signupObject){
+//     console.log(signupObject);
+//     const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
+// }
