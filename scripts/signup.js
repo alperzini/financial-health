@@ -108,5 +108,6 @@ form.addEventListener("submit", function(event){
 async function postSignupData(signupObject){
     console.log(signupObject);
     const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
+    console.log("POST data:", response.data);
 }
 
