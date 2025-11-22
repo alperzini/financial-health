@@ -5,25 +5,114 @@
 .site-footer {
     background: $color-secondary-green;
     color: $color-neutral-white;
-    margin: pxToRem(0) pxToRem(0);
-    padding: pxToRem(64) pxToRem(120);
+    padding: pxToRem(40) pxToRem(20);
+
+    @include desktop {
+        padding: pxToRem(64) pxToRem(120);
+    }
 
     &__wrapper {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: pxToRem(20);
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: pxToRem(40);
+        }
+    }
+
+    &__container:first-child {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(20);
+
+        @include desktop {
+            width: 60%;
+        }
+    }
+
+
+    &__container:last-child {
+        width: 100%;
+        text-align: left;
+        margin-top: pxToRem(30);
+
+        @include desktop {
+            width: 40%;
+            text-align: right;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     &__list {
         list-style: none;
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
-        gap: pxToRem(48);
+        gap: pxToRem(8);
+        padding: 0;
+
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: pxToRem(80);
+        }
+
         &--social {
+            flex-direction: row;
             gap: pxToRem(15);
+        }
+    }
+
+    &__disclaimer-wrapper {
+        margin-top: pxToRem(10);
+    }
+
+    &__disclaimer {
+        font-size: pxToRem(12);
+        line-height: 1.4;
+    }
+
+    &__address {
+        font-size: pxToRem(14);
+        line-height: 1.5;
+    }
+
+    &__bottom-section {
+        border-top: 1px solid $color-neutral-150;
+        padding-top: pxToRem(20);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: pxToRem(20);
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: pxToRem(30);
+            gap: 0;
         }
     }
 
     &__link {
         text-decoration: none;
         color: $color-neutral-white;
+    }
+
+    &__item--social {
+        img {
+            width: pxToRem(24);
+            height: pxToRem(24);
+        }
     }
 }
