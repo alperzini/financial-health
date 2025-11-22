@@ -369,6 +369,44 @@ body {
     font-size: 1.25rem;
   }
 }
+.product__tags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px auto;
+}
+@media screen and (min-width: 768px) {
+  .product__tags {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__tags {
+    flex-direction: row;
+  }
+}
+.product__tags button {
+  background-color: #038203;
+  color: white;
+  border-color: #038203;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.product__tags .cta-button {
+  background-color: white;
+  color: #038203;
+  border-color: #038203;
+}
+.product__tags .cta-button:hover {
+  background-color: #d9d9d9;
+}
 
 .signup-page {
   background-color: #038203;

@@ -212,4 +212,44 @@
             font-size: pxToRem(20);
         }
     }
+
+    &__tags {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 30px auto;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include desktop {
+            flex-direction: row;
+        }
+
+        button {
+            background-color: $color-tertiary-green;
+            color: white;
+            border-color: $color-tertiary-green;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            border-width: 2px;
+            border-style: solid;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: $color-tertiary-green;
+            border-color: $color-tertiary-green;
+
+            &:hover {
+                background-color: $color-neutral-150;
+            }
+        }
+    }
 }
