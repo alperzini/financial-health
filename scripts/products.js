@@ -26,7 +26,7 @@ async function getProducts() {
 const data = await getProducts()
 
 async function displayProducts() {
-    const productList = document.getElementsByClassName('card__wrapper')[0]
+    const productList = document.getElementsByClassName('product-intro')[0]
     
     for (const element of data) {
 
