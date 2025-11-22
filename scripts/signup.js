@@ -87,8 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
     populateIncome(income);
 });
 
-
-
 // event listener for form submissions
 
 const apiUrl = "https://industry-sprint-api-365b460ef11e.herokuapp.com";
