@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TD Financial Health - Signup</title>
         <link rel="stylesheet" href="./../../styles/main.css">
-        <script src="../../scripts/signup.js" defer></script>
+        <script type="module" src="../../scripts/signup.js"></script>
     </head>
 
     <body>
@@ -22,35 +22,31 @@
             <main class="signup-form">
                 <form class="signup-form__container">
                     <div class="signup-form__input-wrapper">
-                        <label for="firstName">First name</label>
-                        <input class="signup-form__input" id=firstName type="text" name="firstName" placeholder="">
+                        <input class="signup-form__input" id=firstName type="text" name="firstName" placeholder="First name *">
+                        <label for="firstName">Enter your first name</label>
                     </div>
                     
                     <div class="signup-form__input-wrapper">
-                        <label for="lastName">Last name</label>
-                        <input class="signup-form__input" id=lastName type="text" name="lastName" placeholder="">
+                        <input class="signup-form__input" id=lastName type="text" name="lastName" placeholder="Last name *">
+                        <label for="firstName">Enter your last name</label>
                     </div>
 
                     <div class="signup-form__input-wrapper">
-                        <label for="email">Email</label>
-                        <input class="signup-form__input" id=email type="email" name="email" placeholder="">
+                        <input class="signup-form__input" id=email type="email" name="email" placeholder="Email *">
+                        <label for="firstName">Enter your email</label>
                     </div>
 
                     <div class="signup-form__input-wrapper">
-                        <label for="password">Password</label>
-                        <input class="signup-form__input" id=password type="password" name="password" placeholder="">
+                        <input class="signup-form__input" id=password type="password" name="password" placeholder="Password *">
+                        <label for="firstName">Enter your password</label>
                     </div>
                     <div class="signup-form__input-wrapper">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input class="signup-form__input" id=confirmPassword type="password" name="password" placeholder="">
+                        <input class="signup-form__input" id=confirmPassword type="password" name="password" placeholder="Re-enter password *">
+                        <label for="firstName">Re-enter your password</label>
                     </div>
 
                     <div class="signup-form__input-wrapper" data-audience-container></div>
-
-                    <div class="signup-form__input-wrapper">
-                        <label for="income">Income</label>
-                        <input class="signup-form__input" id=income type="text" name="income" placeholder="">
-                    </div>
+                    <div class="signup-form__input-wrapper" data-income-container></div>
 
                     <div class="signup-form__button">
                         <button class="signup-form__button--green btn" id="submit" type="submit">Sign Up</button>
