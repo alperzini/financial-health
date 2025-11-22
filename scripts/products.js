@@ -1,14 +1,11 @@
 import axios from "https://esm.sh/axios@1.7.7";
 
-async function register() {
-    const getRes = await axios.get('https://industry-sprint-api-365b460ef11e.herokuapp.com/register')
-    console.log('key:', getRes.data.api_key)
-    return (getRes.data.api_key)
-}
 
 
 
-const apiKey = await register()
+
+export const apiKey = 'b89b7bdb-00d9-4a8a-805d-25231152ac36'
+console.log(apiKey)
 const apiUrl = `https://industry-sprint-api-365b460ef11e.herokuapp.com/products?api_key=${apiKey}`
 
 
@@ -48,7 +45,7 @@ async function displayProducts() {
         const title = document.createElement('h3')
         title.classList.add('product__title')
         productDiv.appendChild(title)
-        title.innerHTML = `TEST-${name}`
+        title.innerHTML = `${name}`
 
         const productImage = document.createElement('img')
         productImage.classList.add('product__image')
