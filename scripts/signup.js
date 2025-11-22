@@ -96,11 +96,13 @@ console.log(form)
 form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(event.target.firstName.value);
-
+    const today = new Date();
+const formattedDate = today.toLocaleDateString("en-US");
     const newSignup = {
         firstName: event.target.firstName.value,
         lastName: event.target.lastName.value,
         email: event.target.email.value,
+        
     }
     postSignupData(newSignup);
 })
