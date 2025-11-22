@@ -133,6 +133,7 @@ body {
   margin-top: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 5rem;
 }
 .middle-section__top {
   display: flex;
@@ -167,12 +168,18 @@ body {
   letter-spacing: 0.02rem;
   width: 75%;
 }
-.middle-section__cards {
+@media screen and (min-width: 1200px) {
+  .middle-section__header {
+    width: 75%;
+  }
+}
+
+.feature__cards {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.middle-section__item {
+.feature__item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,19 +187,21 @@ body {
   width: 75%;
   margin: 0 auto; /* align everything in the center */
 }
-.middle-section__item-icon {
-  background-color: #eceeec;
-  border-radius: 2rem;
-  padding: 1rem;
+.feature__item-icon {
+  background-color: #F6FAF0;
+  border-radius: 8rem;
+  padding: 2rem;
+  scale: 30%;
 }
-.middle-section__item-header {
+.feature__item-header {
   color: #003F2D;
   font-size: 1.4rem;
   font-style: 700;
+  margin-top: -4rem;
   line-height: normal;
   letter-spacing: 0.02rem;
 }
-.middle-section__item-text {
+.feature__item-text {
   color: #757575;
   font-size: 1rem;
   line-height: 150%;
@@ -200,33 +209,296 @@ body {
   margin-top: -0.06rem;
 }
 @media screen and (min-width: 768px) {
-  .middle-section__cards {
+  .feature__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 100%;
     justify-items: center;
   }
-  .middle-section__item {
+  .feature__item {
     width: 90%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .middle-section__header {
+  .feature__header {
     width: 75%;
   }
-  .middle-section__cards {
+  .feature__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 100%;
     justify-items: center;
   }
-  .middle-section__item {
+  .feature__item {
     width: 75%;
   }
-  .middle-section__item-text {
+  .feature__item-text {
     width: 80%;
+  }
+}
+
+.financial-beta {
+  background-color: #f9f9f9;
+  padding: 3rem 2rem;
+}
+.financial-beta__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.financial-beta__subheader {
+  color: #757575;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.financial-beta__header {
+  color: #1c1c1c;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.06rem;
+  width: 100%;
+  margin: 0 auto; /* align everything in the center */
+}
+.financial-beta__text {
+  color: #757575;
+  padding-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  width: 90%;
+  padding-bottom: 2rem;
+  margin: 0 auto; /* align everything in the center */
+}
+
+.hero-banner {
+  height: 50vh;
+  min-height: 400px;
+  width: 100%;
+  background-image: url("../../../assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero-banner {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-banner {
+    height: 70vh;
+  }
+}
+
+.hero__content {
+  padding: 0 1.25rem;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.hero__title {
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
+
+.hero__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .hero__link {
+    flex-direction: row;
+  }
+}
+
+.cta__join {
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: 1px solid #038203;
+  background-color: #038203;
+  color: white;
+  line-height: 100%;
+  font-size: 1.0625rem;
+  font-size: 700;
+  padding: 1rem 2rem;
+}
+
+.cta-button {
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  color: #1c1c1c;
+  background-color: white;
+  font-size: 1.0625rem;
+  font-size: 700;
+  padding: 1rem 2rem;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .card__wrapper {
+    padding: 4rem 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__wrapper {
+    padding: 5rem 7.5rem;
+  }
+}
+
+.product-intro {
+  text-align: center;
+  margin: 0 auto 1.5rem;
+}
+.product-intro__title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #1c1c1c;
+}
+@media screen and (min-width: 768px) {
+  .product-intro__title {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-intro__title {
+    font-size: 3rem;
+  }
+}
+.product-intro__details {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #757575;
+}
+@media screen and (min-width: 768px) {
+  .product-intro__details {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-intro__details {
+    font-size: 1.25rem;
+  }
+}
+
+.product__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 0.625rem;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (min-width: 768px) {
+  .product__image {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__image {
+    width: 50%;
+  }
+}
+.product__content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  width: 100%;
+  /* Alternating Layout Logic: ONLY applies on desktop */
+}
+@media screen and (min-width: 768px) {
+  .product__content {
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__content {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__content:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+.product__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1c1c1c;
+}
+@media screen and (min-width: 768px) {
+  .product__title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__title {
+    font-size: 32;
+  }
+}
+.product__details {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #757575;
+}
+@media screen and (min-width: 768px) {
+  .product__details {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__details {
+    font-size: 1.25rem;
+  }
+}
+.product__points {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #757575;
+}
+@media screen and (min-width: 768px) {
+  .product__points {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__points {
+    font-size: 1.25rem;
   }
 }
 .product__tags {
@@ -268,31 +540,33 @@ body {
   background-color: #d9d9d9;
 }
 
-.financial-beta {
-  background-color: #f9f9f9;
-  padding: 3rem 2rem;
-}
-.financial-beta__body {
+.signup-page {
+  background-color: #038203;
   display: flex;
+  padding: 128px 233px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.signup-page__container {
+  color: white;
   text-align: center;
 }
-.financial-beta__subheader {
-  color: #757575;
-  font-size: 0.8rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
+
+.signup-form__container {
+  background-color: white;
+  display: flex;
+  padding: 3.125rem 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  gap: 26px;
 }
-.financial-beta__header {
-  color: #1c1c1c;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.06rem;
-  width: 100%;
-  margin: 0 auto; /* align everything in the center */
+@media screen and (min-width: 768px) {
+  .signup-form__container {
+    padding: 3.125rem 6.25rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .signup-form__container {
@@ -342,14 +616,4 @@ select {
   select {
     width: 21.5rem;
   }
-.financial-beta__text {
-  color: #757575;
-  padding-top: 0.6rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  width: 90%;
-  padding-bottom: 2rem;
-  margin: 0 auto; /* align everything in the center */
 }/*# sourceMappingURL=main.css.map */
