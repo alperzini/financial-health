@@ -71,7 +71,8 @@
             border: 1px solid $color-tertiary-green;
         }
 
-        &:focus { // only works on the select fields
+        &:focus {
+            outline: none;
             border: 1px solid $color-tertiary-green;
             border-bottom: 3px solid $color-tertiary-green;
         }

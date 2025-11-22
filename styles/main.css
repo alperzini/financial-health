@@ -607,6 +607,7 @@ body {
   border: 1px solid #038203;
 }
 .signup-form__input:focus, .signup-form__input-wrapper select:focus {
+  outline: none;
   border: 1px solid #038203;
   border-bottom: 3px solid #038203;
 }
