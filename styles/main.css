@@ -136,8 +136,20 @@ body {
   gap: 0.9375rem;
 }
 .site-footer__regulatory-wrapper img {
-  height: 3rem;
+  height: 2rem;
   width: auto;
+}
+@media screen and (min-width: 768px) {
+  .site-footer__regulatory-wrapper img {
+    height: 3rem;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-footer__regulatory-wrapper img {
+    height: 3rem;
+    width: auto;
+  }
 }
 .site-footer__link {
   text-decoration: none;
@@ -405,7 +417,7 @@ body {
   width: 100%;
   background-image: url("../../../assets/images/hero.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;

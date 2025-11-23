@@ -110,8 +110,17 @@
         gap: pxToRem(15); 
 
         img {
-            height: pxToRem(48); 
+            height: pxToRem(32); 
             width: auto;
+
+            @include tablet{
+                height: pxToRem(48); 
+            width: auto;
+            }
+            @include desktop {
+                height: pxToRem(48); 
+            width: auto;
+            }
         }
     }
 
