@@ -140,6 +140,10 @@
         position: relative;
         display: inline-block;
 
+        &.is-current-page {
+            font-weight: bold;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -155,10 +159,6 @@
         &:hover::after {
             transform: scaleX(1); 
             transform-origin: bottom left;
-        }
-
-        &.is-current-page {
-            font-weight: bold;
         }
     }
 }
