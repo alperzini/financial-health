@@ -3,7 +3,7 @@
 @use "../mixins" as *;
 
 .hero-banner {
-    
+
     height: 50vh;
     min-height: 400px;
     width: 100%;
@@ -34,7 +34,7 @@
 }
 
 .hero__title {
-    
+
     font-size: pxToRem(32);
 
     @include tablet {
@@ -81,7 +81,7 @@
 }
 
 .card__wrapper {
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,8 +131,21 @@
 }
 
 .product {
-    
-        //divya will update this
+    &__text-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: pxToRem(20) pxToRem(10);
+
+        @include desktop {
+            width: 50%;
+            padding-left: pxToRem(40);
+            padding-right: 0;
+        }
+    }
+
+    //divya will update this
     &__image {
         display: flex;
         justify-content: center;
@@ -153,7 +166,7 @@
     }
 
     &__content {
-        border: red solid 4px;
+
         display: flex;
         flex-direction: column;
         margin-bottom: pxToRem(48);
@@ -179,7 +192,7 @@
     }
 
     &__title {
-        
+
         font-size: pxToRem(24);
         font-weight: 700;
         color: $color-neutral-900;
@@ -194,7 +207,7 @@
     }
 
     &__details {
-        
+
         font-size: pxToRem(16);
         font-weight: 400;
         color: $color-neutral-300;
@@ -209,7 +222,7 @@
     }
 
     &__points {
-        
+
         font-size: pxToRem(16);
         font-weight: 400;
         color: $color-neutral-300;

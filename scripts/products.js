@@ -57,6 +57,7 @@ async function displayProducts(data) {
 
         const productTextContent = document.createElement('div')
         productTextContent.classList.add('product__text-content')
+        productTextContentImage.appendChild(productTextContent)
         
 
         const title = document.createElement('h3')
@@ -97,7 +98,7 @@ async function displayProducts(data) {
         tags.appendChild(secondButton)
 
 
-        productArticle.appendChild(productTextContent)
+        // productArticle.appendChild(productTextContent)
         productList.appendChild(productArticle)
        
     }
