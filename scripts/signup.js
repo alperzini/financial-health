@@ -28,25 +28,15 @@ function populateAudience(data) {
   defaultOption.selected = true;
   selectElement.appendChild(defaultOption);
 
-<<<<<<< HEAD
     data.forEach(function(item) {
         const optionElement = document.createElement('option');
         optionElement.value = item.value;
         optionElement.textContent = item.name;
         selectElement.appendChild(optionElement);
     });
-=======
-  data.forEach((item) => {
-    const optionElement = document.createElement("option");
-    optionElement.value = item.value;
-    optionElement.textContent = item.name;
-    selectElement.appendChild(optionElement);
-  });
->>>>>>> main
 
   audienceWrapper.appendChild(selectElement);
 
-<<<<<<< HEAD
     const labelElement = document.createElement('label');
     labelElement.setAttribute('for', 'audience');
     labelElement.textContent = 'Select your situation';
@@ -58,14 +48,6 @@ function populateAudience(data) {
     errorSpan.setAttribute('data-error-for', 'audience');
     audienceWrapper.appendChild(errorSpan);
 };
-=======
-  const labelElement = document.createElement("label");
-  labelElement.setAttribute("for", "audience");
-  labelElement.textContent = "Select your situation";
-  labelElement.classList.add("dropdown-label");
-  audienceWrapper.appendChild(labelElement);
-}
->>>>>>> main
 
 const income = [
   { id: "income1", name: "Under $25,000", value: "Under $25,000" },
@@ -92,25 +74,15 @@ function populateIncome(data) {
   defaultOption.selected = true;
   selectElement.appendChild(defaultOption);
 
-<<<<<<< HEAD
     data.forEach(function(item) {
         const optionElement = document.createElement('option');
         optionElement.value = item.value;
         optionElement.textContent = item.name;
         selectElement.appendChild(optionElement);
     });
-=======
-  data.forEach((item) => {
-    const optionElement = document.createElement("option");
-    optionElement.value = item.value;
-    optionElement.textContent = item.name;
-    selectElement.appendChild(optionElement);
-  });
->>>>>>> main
 
   incomeWrapper.appendChild(selectElement);
 
-<<<<<<< HEAD
     const labelElement = document.createElement('label');
     labelElement.setAttribute('for', 'income');
     labelElement.textContent = 'Select your income';
@@ -128,18 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
     populateIncome(income);
 
     attachValidationListeners();
-=======
-  const labelElement = document.createElement("label");
-  labelElement.setAttribute("for", "income");
-  labelElement.textContent = "Select your income";
-  labelElement.classList.add("dropdown-label");
-  incomeWrapper.appendChild(labelElement);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  populateAudience(audience);
-  populateIncome(income);
->>>>>>> main
 });
 
 // validating required fields
@@ -252,7 +212,7 @@ function attachValidationListeners() {
 }
 
 console.log(apiKey);
-const form = document.getElementsByClassName("signup-form")[0];
+
 console.log(form);
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -289,10 +249,7 @@ form.addEventListener("submit", function(event){
             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
-});
-    //alpers design
-
-
+    
 
     console.log(event.target.firstName.value);
     
@@ -320,6 +277,10 @@ form.addEventListener("submit", function(event){
     window.location.href = "../forms/confirmation.html";
   }, 2000);
 });
+    //alpers design
+
+
+
 
 async function postSignupData(signupObject) {
   console.log(signupObject);
@@ -332,25 +293,19 @@ async function postSignupData(signupObject) {
 }
 
 function redirect(targetpage) {
-<<<<<<< HEAD
+
     console.log("redirect");
     const currentPage = encodeURI(window.location.href);
     window.location.href = `${targetpage}?source=${currentPage}`;
 }
-=======
-  console.log("redirect");
-  const currentPage = encodeURI(window.location.href);
-  window.location.href = `${targetpage}?source=${currentPage}`;
-}
+
 
 //Store the Audience
 document.querySelector("form").addEventListener("submit", () => {
   const audience = document.getElementById("audience").value;
   localStorage.setItem("selectedAudience", audience); //Local Storage helps us to hold on the data for confirmation page
 });
-<<<<<<< HEAD
->>>>>>> main
-=======
+
 
 
 //Google Data Testing
@@ -404,4 +359,4 @@ formGoogle.addEventListener("submit", async function (event) {
 });
 
 
->>>>>>> main
+
