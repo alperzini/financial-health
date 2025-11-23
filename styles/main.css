@@ -275,6 +275,55 @@ body {
   width: 3.75rem;
 }
 
+.audience-result {
+  margin-top: 2rem;
+  display: flex;
+  padding: 3.125rem 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  align-items: center;
+  background-color: white;
+}
+.audience-result__header {
+  color: #003f2d;
+}
+.audience-result__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.audience-result__img {
+  width: 3rem;
+  background-color: #F6FAF0;
+  border-radius: 10rem;
+  padding: 2rem;
+}
+.audience-result__link {
+  color: #54b848;
+  font-size: 1.5rem;
+  font-style: bold;
+}
+.audience-result__text {
+  padding: 1rem;
+  margin-top: -0.5rem;
+}
+.audience-result__student {
+  display: none;
+}
+.audience-result__retiree {
+  display: none;
+}
+.audience-result__canada {
+  display: none;
+}
+.audience-result__homeowner {
+  display: none;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;
