@@ -911,7 +911,6 @@ body {
 .signup-page {
   background-color: #038203;
   display: flex;
-  padding: 128px 233px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
