@@ -104,13 +104,13 @@ async function displayProducts(data) {
     }
 
     const financialPulseButton = document.getElementById('R3K9LT-btn')
-    financialPulseButton.textContent = "Something Divya wrote"
+    financialPulseButton.textContent = "Reveal your Financial Health Score"
 
     const finanicalHealthButton = document.getElementById('M8F2QY-btn')
-    finanicalHealthButton.textContent = 'Real your Financial Health Score'
+    finanicalHealthButton.textContent = 'Get smart budget alerts instantly'
 
     const smartAlertsButton = document.getElementById('B9X3JE-btn')
-    smartAlertsButton.textContent = 'Get smart budget alerts instantly'
+    smartAlertsButton.textContent = 'See your personalized financial roadmap'
 
 
 }
