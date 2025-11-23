@@ -5,24 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TD Financial Health - Signup</title>
         <link rel="stylesheet" href="./../../styles/main.css">
-        <script type="module" src="../../scripts/signup.js" defer></script>
-        <script type="module" src="../../scripts/confirmation.js" defer></script>
+        <script type="module" src="../../scripts/signup.js"></script>
+        <script type="module" src="../../scripts/confirmation.js"></script>
+        <script type="module" src="../../scripts/navbar.js"></script>
     </head>
 
     <body>
+        <div class="site-header__banner"></div>
         <header class="site-header">
             <div class="site-header__wrapper">
-                <a class="site-header__logo" href="./../../index.html"><img src="./../../assets/logos/td-logo.svg" alt="td logo"></a>
+                <a class="site-header__logo" href="../../index.html">
+                    <img src="../../assets/logos/td-logo.svg" alt="td logo">
+                </a>
+                <button class="site-header__hamburger">
+                    <img class="site-header__hamburger-icon" src="../../assets/icons/hamburgermenu-tertiary-green.svg" alt="navigation menu">
+                </button>
+
                 <nav class="primary-nav__links-wrapper">
                     <ul class="primary-nav__list">
                         <li class="primary-nav__item">
-                            <a class="primary-nav__link" href="./../../index.html">TD Financial Health</a>
+                            <a class="primary-nav__link" href="../../index.html">TD Financial Health</a>
                         </li>
                         <li class="primary-nav__item">
-                            <a class="primary-nav__link" href="./../products/products.html">Features</a>
+                            <a class="primary-nav__link" href="./../products.html">Features</a>
                         </li>
                         <li class="primary-nav__item">
-                            <a class="primary-nav__link" href="./../forms/signup.html">Sign Up</a>
+                            <a class="primary-nav__link" href="./signup.html">Sign Up</a>
                         </li>
                     </ul>
                 </nav>
@@ -121,7 +129,8 @@
                         <a class="site-footer__link" href="#"><img src="../../assets/icons/linkedin.svg" alt="LinkedIn"></a>
                     </li>
                 </ul>
-                <img src="../../assets/images/deposit-protection.svg" alt="Deposit Protection Des Depots">
+                <a href="https://www.cdic.ca/depositors/whats-covered/">
+                    <img src="../../assets/images/deposit-protection.svg" alt="Deposit Protection Des Depots"></a>
             </div>
         </footer>
     </body>
