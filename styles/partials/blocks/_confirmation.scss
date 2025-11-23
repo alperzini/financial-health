@@ -5,7 +5,6 @@
 .confirmation-page {
     background-color: $color-tertiary-green;
     display: flex;
-    padding: 128px 233px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -15,15 +14,22 @@
     &__hero {
         color: $color-neutral-white;
     }
-    
+
     &__container {
         background-color: $color-neutral-white;
         display: flex;
-        padding: pxToRem(50) pxToRem(20);
+        padding: pxToRem(24) pxToRem(30);
+        margin: pxToRem(20);
         flex-direction: column;
         justify-content: center;
         align-self: stretch;
         gap: 26px;
+
+        @include tablet {
+            align-self: center;
+            padding: pxToRem(50) pxToRem(30);
+            margin:pxToRem(48);
+        }
     }
 
     &__title {
@@ -38,7 +44,7 @@
 }
 
 .audience-result {
-    margin-top: 2rem;
+    margin: 2rem;
     display: flex;
     padding: pxToRem(50) pxToRem(20);
     flex-direction: column;
@@ -46,9 +52,15 @@
     align-self: stretch;
     align-items: center;
     background-color: $color-neutral-white;
+
+    @include tablet {
+        align-self: center;
+    }
+
     &__header {
         color: $color-secondary-green
     }
+
     &__card {
         display: flex;
         flex-direction: column;
@@ -57,30 +69,37 @@
         gap: 1.5rem;
         margin-top: 1rem;
     }
+
     &__img {
         width: 3rem;
         background-color: #F6FAF0;
         border-radius: 10rem;
         padding: 2rem;
     }
+
     &__link {
         color: $color-primary-green;
         font-size: 1.5rem;
         font-style: bold;
     }
+
     &__text {
         padding: 1rem;
         margin-top: -0.5rem;
     }
+
     &__student {
         display: none;
     }
+
     &__retiree {
         display: none;
     }
+
     &__canada {
         display: none;
     }
+
     &__homeowner {
         display: none;
     }
