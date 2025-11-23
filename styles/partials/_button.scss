@@ -6,29 +6,40 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
     gap: 1rem;
-    &__signup-link {
-        font-style: none;
-        text-decoration: none;
-    }
-    &__signup-link__button {
+
+    .button {
+        display: inline-block;
         padding: 0.8rem 1rem;
         border-radius: 0.4rem;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border: 2px solid transparent;
+        font-weight: 500;
+    }
+
+    .button--signup {
         background-color: #038203;
-        color: azure;
-        border: #038203 1px solid;
+        border-color: #038203;
+        color: white;
+
+        &:hover {
+            background-color: #026602;
+            color: white;
+        }
     }
-    &__learnmore-link {
-        font-style: none;
-        text-decoration: none;
-    }
-    &__learnmore-link__button {
-        padding: 0.8rem 1rem;
-        border-radius: 0.4rem;
+
+    .button--learnmore {
         background-color: #fff;
+        border-color: #ffffff;
         color: black;
-        border: #fff 1px solid;
         font-weight: bold;
+
+        &:hover {
+            background-color: #e6e6e6;
+            color: black;
+        }
     }
 }
