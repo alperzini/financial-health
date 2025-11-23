@@ -1,4 +1,5 @@
 @use "./partials/base";
+@use "./partials/button";
 @use "./partials/fonts";
 @use "./partials/footer";
 @use "./partials/header";
@@ -10,5 +11,3 @@
 @use "./partials/blocks/products";
 @use "./partials/blocks/responses";
 @use "./partials/blocks/signup";
-
-

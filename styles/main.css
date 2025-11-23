@@ -27,6 +27,37 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  gap: 1rem;
+}
+.button-group__signup-link {
+  font-style: none;
+  text-decoration: none;
+}
+.button-group__signup-link__button {
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #038203;
+  color: azure;
+  border: #038203 1px solid;
+}
+.button-group__learnmore-link {
+  font-style: none;
+  text-decoration: none;
+}
+.button-group__learnmore-link__button {
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: black;
+  border: #fff 1px solid;
+  font-weight: bold;
+}
+
 .site-footer {
   background: #003f2d;
   color: white;
@@ -356,37 +387,6 @@ body {
 }
 .audience-result__homeowner {
   display: none;
-}
-
-.button-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  gap: 1rem;
-}
-.button-group__signup-link {
-  font-style: none;
-  text-decoration: none;
-}
-.button-group__signup-link__button {
-  padding: 0.8rem 1rem;
-  border-radius: 0.4rem;
-  background-color: #038203;
-  color: azure;
-  border: #038203 1px solid;
-}
-.button-group__learnmore-link {
-  font-style: none;
-  text-decoration: none;
-}
-.button-group__learnmore-link__button {
-  padding: 0.8rem 1rem;
-  border-radius: 0.4rem;
-  background-color: #fff;
-  color: black;
-  border: #fff 1px solid;
-  font-weight: bold;
 }
 
 .middle-section {
