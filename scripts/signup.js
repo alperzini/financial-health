@@ -100,6 +100,28 @@ console.log(form);
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   console.log(event.target.firstName.value);
+console.log(form)
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    //alpers design
+
+
+
+    console.log(event.target.firstName.value);
+    
+    const newSignup = {
+        firstName: event.target.firstName.value,
+        lastName: event.target.lastName.value,
+        email: event.target.email.value,
+        
+    }
+    postSignupData(newSignup);
+    
+    setTimeout(function() {
+        window.location.href = "../forms/confirmation.html";
+    }, 2000);
+})
 
   const newSignup = {
     firstName: event.target.firstName.value,
