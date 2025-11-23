@@ -224,6 +224,11 @@ form.addEventListener("submit", function(event){
         formValid = false;
     }
 
+
+
+
+
+
     if (formValid) {
         const newSignup = {
             firstName: event.target.firstName.value,
@@ -244,7 +249,7 @@ async function postSignupData(signupObject){
     console.log(signupObject);
     const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
     console.log("POST data:", response.data);
-    redirect('confirmation.html')
+    
 }
 
 function redirect(targetpage) {
@@ -252,3 +257,46 @@ function redirect(targetpage) {
     const currentPage = encodeURI(window.location.href);
     window.location.href = `${targetpage}?source=${currentPage}`;
 }
+
+
+//alper new code injection  
+
+
+
+
+const formGoogle = document.querySelector(".signup-form__container");
+formGoogle.addEventListener("submit", async function (event) {
+  event.preventDefault();
+ 
+  const formData = {
+    firstName: event.target.firstName.value,
+    lastName: event.target.lastName.value,
+    email: event.target.email.value,
+    audience: document.getElementById("audience").value,
+    income: document.getElementById("income").value,
+    password: event.target.password.value // remove if not needed
+  };
+  console.log("Sending form data to Google Sheets:", formData);
+
+  const googleScriptURL = 'https://script.google.com/macros/s/AKfycby5MQU7HTydnb7iyNv1nkKqKWroOZzuFZZ9KDn45hCNktBPM0_vDfhmA6dE8nRslOI/exec'
+  try {
+    // Send to Google Sheets
+
+    await fetch(googleScriptURL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
+    
+   
+    // Save audience locally for confirmation page
+    localStorage.setItem("selectedAudience", formData.audience);
+    // Redirect after success
+    setTimeout(() => {
+      redirect('confirmation.html')
+    }, 1500);
+  } catch (error) {
+    console.error("Google Sheets submission failed:", error);
+  }
+});
