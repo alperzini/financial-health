@@ -145,6 +145,11 @@ body {
     padding: 1.25rem 7.5rem;
   }
 }
+.site-header__banner {
+  padding-top: 1.25rem;
+  background-color: #038203;
+  z-index: 1001;
+}
 .site-header__logo {
   z-index: 1000;
 }
@@ -172,8 +177,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 6.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 6.875rem;
   width: 100%;
   background-color: #d9d9d9;
   z-index: 100;
@@ -202,7 +206,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0 2.5rem;
+  padding: 0;
   gap: 0.3125rem;
 }
 @media screen and (min-width: 768px) {
@@ -220,12 +224,20 @@ body {
 }
 .primary-nav__item {
   text-align: center;
+  padding: 0.625rem 0;
+}
+.primary-nav__item:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.primary-nav__item:nth-child(even) {
+  background-color: #d9d9d9;
 }
 @media screen and (min-width: 1200px) {
   .primary-nav__item {
-    border-bottom: none;
-    padding: 0;
     text-align: left;
+  }
+  .primary-nav__item:nth-child(odd), .primary-nav__item:nth-child(even) {
+    background-color: transparent;
   }
 }
 .primary-nav__link {
