@@ -36,10 +36,26 @@
         }
     }
 
+    &__error {
+        display: none;
+        background-color: darkred;
+    }
+
     &__input-wrapper {
         display: flex;
         flex-direction: column;
         gap: pxToRem(8);
+    }
+
+    &__input-wrapper.error { 
+        .signup-form__input,
+        select {
+            border-color: darkred;
+            border-bottom: 3px solid darkred;
+        }
+        .signup-form__error-message {
+            display: block; 
+        }
     }
 
     &__button {
@@ -64,9 +80,7 @@
         border: 1px solid $color-neutral-200;
         background: $color-neutral-white;
         box-sizing: border-box;
-        @include desktop {
-            width: 100%;
-        }
+        width: 100%;
 
         &:hover {
             border: 1px solid $color-tertiary-green;
@@ -78,8 +92,18 @@
             border-bottom: 3px solid $color-tertiary-green;
         }
     }
+    
+    &__input {
+        &--error {
+            font-size: small;
+            color: darkred;
+            display: none;
+            margin-top: pxToRem(4); 
+        }
+    }
 }
 
 .dropdown-label {
     color: $color-neutral-black;
+    font-size: small;
 }

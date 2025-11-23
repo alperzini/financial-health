@@ -768,10 +768,22 @@ body {
     padding: 5.15625rem 13.375rem;
   }
 }
+.signup-form__error {
+  display: none;
+  background-color: darkred;
+}
 .signup-form__input-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.signup-form__input-wrapper.error .signup-form__input,
+.signup-form__input-wrapper.error select {
+  border-color: darkred;
+  border-bottom: 3px solid darkred;
+}
+.signup-form__input-wrapper.error .signup-form__error-message {
+  display: block;
 }
 .signup-form__button {
   display: flex;
@@ -793,11 +805,7 @@ body {
   border: 1px solid #cccccc;
   background: white;
   box-sizing: border-box;
-}
-@media screen and (min-width: 1200px) {
-  .signup-form__input, .signup-form__input-wrapper select {
-    width: 100%;
-  }
+  width: 100%;
 }
 .signup-form__input:hover, .signup-form__input-wrapper select:hover {
   border: 1px solid #038203;
@@ -807,7 +815,14 @@ body {
   border: 1px solid #038203;
   border-bottom: 3px solid #038203;
 }
+.signup-form__input--error {
+  font-size: small;
+  color: darkred;
+  display: none;
+  margin-top: 0.25rem;
+}
 
 .dropdown-label {
   color: black;
+  font-size: small;
 }/*# sourceMappingURL=main.css.map */
