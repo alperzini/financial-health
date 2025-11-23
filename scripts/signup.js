@@ -95,6 +95,11 @@ const form = document.getElementsByClassName("signup-form")[0];
 console.log(form)
 form.addEventListener("submit", function(event){
     event.preventDefault();
+
+    //alpers design
+
+
+
     console.log(event.target.firstName.value);
     
     const newSignup = {
