@@ -60,38 +60,44 @@
                     <div class="signup-form__input-wrapper">
                         <input class="signup-form__input" id=firstName type="text" name="firstName"
                             placeholder="First name *">
-                        <label for="firstName">Enter your first name</label>
+                        <label class="signup-form__input-label" for="firstName">Enter your first name</label>
                         <span class="signup-form__error-message" data-error-for="firstName"></span>
                     </div>
 
                     <div class="signup-form__input-wrapper">
                         <input class="signup-form__input" id=lastName type="text" name="lastName" placeholder="Last name *">
-                        <label for="firstName">Enter your last name</label>
+                        <label class="signup-form__input-label"for="firstName">Enter your last name</label>
                         <span class="signup-form__error-message" data-error-for="lastName"></span>
                     </div>
 
                     <div class="signup-form__input-wrapper">
                         <input class="signup-form__input" id=email type="email" name="email" placeholder="Email *">
-                        <label for="firstName">Enter your email</label>
+                        <label class="signup-form__input-label" for="firstName">Enter your email</label>
                         <span class="signup-form__error-message" data-error-for="email"></span>
                     </div>
 
                     <div class="signup-form__input-wrapper">
                         <input class="signup-form__input" id=password type="password" name="password"
                             placeholder="Password *">
-                        <label for="firstName">Enter your password</label>
+                        <label class="signup-form__input-label" for="firstName">Enter your password</label>
                         <span class="signup-form__error-message" data-error-for="password"></span>
                     </div>
                     <div class="signup-form__input-wrapper">
                         <input class="signup-form__input" id=confirmPassword type="password" name="password"
                             placeholder="Re-enter password *">
-                        <label for="firstName">Re-enter your password</label>
+                        <label class="signup-form__input-label" for="firstName">Re-enter your password</label>
                         <span class="signup-form__error-message" data-error-for="confirmPassword"></span>
                     </div>
 
                     <div class="signup-form__input-wrapper" data-audience-container></div>
 
                     <div class="signup-form__input-wrapper" data-income-container></div>
+
+                    <div class="signup-form__security-wrapper">
+                        <img class="signup-form__security-icon" src="../../assets/icons/protection.svg" alt="security">
+                        <p class="signup-form__security-message">TD Online and Mobile Security Guarantee:&nbsp;</p>
+                        <a class="signup-form__security-link" href="https://www.td.com/ca/en/about-td/privacy-and-security/how-we-protect-you/online-security-guarantee-guarantee"> You are protected</a>
+                    </div>
 
                     <div class="signup-form__button">
                         <button class="signup-form__button--green btn" id="submit" type="submit">Sign Up</button>

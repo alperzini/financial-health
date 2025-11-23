@@ -989,8 +989,27 @@ body {
 .signup-page__container {
   color: white;
   text-align: center;
+  padding: 1.25rem 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .signup-page__container {
+    padding: 2.5rem 7.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .signup-page__title-container {
+    padding: 0 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .signup-page__description-container {
+    padding: 0 5rem;
+  }
 }
 
+.signup-form {
+  margin-bottom: 2.5rem;
+}
 .signup-form__container {
   background-color: white;
   display: flex;
@@ -998,10 +1017,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-self: stretch;
-  gap: 26px;
+  gap: 15px;
 }
 @media screen and (min-width: 768px) {
   .signup-form__container {
+    width: auto;
     padding: 3.125rem 6.25rem;
   }
 }
@@ -1026,6 +1046,7 @@ body {
 }
 .signup-form__input-wrapper.error .signup-form__error-message {
   display: block;
+  font-size: small;
 }
 .signup-form__button {
   display: flex;
@@ -1041,13 +1062,23 @@ body {
 }
 .signup-form__input, .signup-form__input-wrapper select {
   display: flex;
-  padding: 12px;
   justify-content: space-between;
   align-items: center;
+  padding: 0.75rem;
   border: 1px solid #cccccc;
   background: white;
   box-sizing: border-box;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .signup-form__input, .signup-form__input-wrapper select {
+    width: 21.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .signup-form__input, .signup-form__input-wrapper select {
+    width: 31.25rem;
+  }
 }
 .signup-form__input:hover, .signup-form__input-wrapper select:hover {
   border: 1px solid #038203;
@@ -1062,6 +1093,27 @@ body {
   color: darkred;
   display: none;
   margin-top: 0.25rem;
+}
+.signup-form__input-label {
+  font-size: small;
+}
+.signup-form__security-wrapper {
+  display: flex;
+  font-size: small;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .signup-form__security-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.signup-form__security-icon {
+  width: 2.5rem;
+}
+.signup-form__security-link {
+  text-decoration: none;
+  color: #038203;
 }
 
 .dropdown-label {
