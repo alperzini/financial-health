@@ -5,7 +5,6 @@
 
 .table-banner {
     display: flex;
-    padding: 128px 233px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -13,8 +12,78 @@
 }
 
 .table-banner h3 {
-      
-        color: red;
-        text-align: center;
-    
+    color: $color-neutral-300;
+    font-size: pxToRem(14);
+    font-weight: 700;
+    text-align: center;
+
+    @include tablet {
+        font-size: pxToRem(18);
+    }
+
+    @include desktop {
+        font-size: pxToRem(20);
+    }
+}
+
+.table-banner h1 {
+    color: $color-neutral-900;
+    font-size: pxToRem(20);
+    font-weight: 700;
+
+    @include tablet {
+        font-size: pxToRem(36);
+    }
+
+    @include desktop {
+        font-size: pxToRem(48);
+    }
+}
+
+.table-responsive-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    overflow-x: auto;
+}
+
+#responses-table {
+    width: 80%;
+    border-collapse: collapse;
+    font-size: pxToRem(16);
+}
+
+.response-table__head th {
+    color: white;
+    background-color: $color-tertiary-green;
+    text-align: left;
+    padding: pxToRem(16);
+}
+
+#responses-table td {
+    padding: pxToRem(16) pxToRem(40);
+    color: $color-neutral-900;
+    border-bottom: 1px solid $color-neutral-100;
+}
+
+#responses-table tr:nth-child(odd) {
+    background-color: $color-neutral-100;
+}
+
+#responses-table tr:hover {
+    background-color: $color-primary-green;
+}
+
+#responses-table button {
+    background-color: $color-tertiary-green;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#responses-table button:hover {
+    background: $color-neutral-900;
 }
