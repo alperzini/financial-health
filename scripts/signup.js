@@ -239,6 +239,24 @@ form.addEventListener("submit", function(event){
         }
     }
 });
+    //alpers design
+
+
+
+    console.log(event.target.firstName.value);
+    
+    const newSignup = {
+        firstName: event.target.firstName.value,
+        lastName: event.target.lastName.value,
+        email: event.target.email.value,
+        
+    }
+    postSignupData(newSignup);
+    
+    setTimeout(function() {
+        window.location.href = "../forms/confirmation.html";
+    }, 2000);
+})
 
 async function postSignupData(signupObject){
     console.log(signupObject);
@@ -248,7 +266,20 @@ async function postSignupData(signupObject){
 }
 
 function redirect(targetpage) {
+<<<<<<< HEAD
     console.log("redirect");
     const currentPage = encodeURI(window.location.href);
     window.location.href = `${targetpage}?source=${currentPage}`;
 }
+=======
+  console.log("redirect");
+  const currentPage = encodeURI(window.location.href);
+  window.location.href = `${targetpage}?source=${currentPage}`;
+}
+
+//Store the Audience
+document.querySelector("form").addEventListener("submit", () => {
+    const audience = document.getElementById("audience").value;
+    localStorage.setItem("selectedAudience", audience); //Local Storage helps us to hold on the data for confirmation page
+});
+>>>>>>> main

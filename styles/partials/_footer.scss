@@ -104,6 +104,26 @@
         }
     }
 
+        &__regulatory-wrapper {
+        display: flex;
+        align-items: center;
+        gap: pxToRem(15); 
+
+        img {
+            height: pxToRem(32); 
+            width: auto;
+
+            @include tablet{
+                height: pxToRem(48); 
+            width: auto;
+            }
+            @include desktop {
+                height: pxToRem(48); 
+            width: auto;
+            }
+        }
+    }
+
     &__link {
         text-decoration: none;
         color: $color-neutral-white;

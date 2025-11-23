@@ -36,3 +36,53 @@
         width: pxToRem(60);
     }
 }
+
+.audience-result {
+    margin-top: 2rem;
+    display: flex;
+    padding: pxToRem(50) pxToRem(20);
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    background-color: $color-neutral-white;
+    &__header {
+        color: $color-secondary-green
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    &__img {
+        width: 3rem;
+        background-color: #F6FAF0;
+        border-radius: 10rem;
+        padding: 2rem;
+    }
+    &__link {
+        color: $color-primary-green;
+        font-size: 1.5rem;
+        font-style: bold;
+    }
+    &__text {
+        padding: 1rem;
+        margin-top: -0.5rem;
+    }
+    &__student {
+        display: none;
+    }
+    &__retiree {
+        display: none;
+    }
+    &__canada {
+        display: none;
+    }
+    &__homeowner {
+        display: none;
+    }
+
+}

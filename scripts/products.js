@@ -14,23 +14,27 @@ const apiUrl = `https://industry-sprint-api-365b460ef11e.herokuapp.com/products?
 
 async function getProducts() {
     
+    console.log('get products is running')
+    const response = await axios.get(apiUrl)
+    console.log(response)
+    return response.data
 
-    const getRes = await axios.get(apiUrl);
-    return (getRes.data)
+    
 
 }
 
 
 
 //api_key=${apiKey}/
-const data = await getProducts()
+// const data = await getProducts()
 
-async function displayProducts() {
+async function displayProducts(data) {
     const productList = document.getElementsByClassName('card__wrapper')[0]
     console.log(productList)
+    
     for (const element of data) {
-
-       
+        
+       console.log('test')
         const id = element.id
         const name = element.name
         const image = `https://industry-sprint-api-365b460ef11e.herokuapp.com${element.image}`
@@ -39,8 +43,12 @@ async function displayProducts() {
 
         const productContent = document.createElement('article')
         productContent.id = id
+        productContent.classList.add('product')
+
         const productDiv = document.createElement('div')
         productDiv.classList.add('product__content')
+        
+
         const title = document.createElement('h3')
         title.classList.add('product__title')
         productDiv.appendChild(title)
@@ -78,27 +86,32 @@ async function displayProducts() {
         learnButton.href = '#'
 
         const secondButton = document.createElement('button')
-        secondButton.id = element.id
+        secondButton.id = `${id}-btn`
         tags.appendChild(secondButton)
 
 
-
-        productList.appendChild(productDiv)
+        productContent.appendChild(productDiv)
+        productList.appendChild(productContent)
        
     }
 
-    const financialPulseButton = document.getElementById('R3K9LT')
-    financialPulseButton.innerHTML = "Something Divya wrote"
+    const financialPulseButton = document.getElementById('R3K9LT-btn')
+    financialPulseButton.textContent = "Something Divya wrote"
 
-    const finanicalHealthButton = document.getElementById('M8F2QY')
-    finanicalHealthButton.innerHTML = 'Real your Financial Health Score'
+    const finanicalHealthButton = document.getElementById('M8F2QY-btn')
+    finanicalHealthButton.textContent = 'Real your Financial Health Score'
 
-    const smartAlertsButton = document.getElementById('B9X3JE')
-    smartAlertsButton.innerHTML = 'Get smart budget alerts instantly'
+    const smartAlertsButton = document.getElementById('B9X3JE-btn')
+    smartAlertsButton.textContent = 'Get smart budget alerts instantly'
 
 
 }
 
 
 
-    displayProducts()
+document.addEventListener("DOMContentLoaded", async () => {
+  
+    const data = await getProducts();    
+    console.log(data)
+    await displayProducts(data)
+});

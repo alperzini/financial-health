@@ -124,6 +124,27 @@ body {
     gap: 0;
   }
 }
+.site-footer__regulatory-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.site-footer__regulatory-wrapper img {
+  height: 2rem;
+  width: auto;
+}
+@media screen and (min-width: 768px) {
+  .site-footer__regulatory-wrapper img {
+    height: 3rem;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-footer__regulatory-wrapper img {
+    height: 3rem;
+    width: auto;
+  }
+}
 .site-footer__link {
   text-decoration: none;
   color: white;
@@ -276,6 +297,55 @@ body {
   width: 3.75rem;
 }
 
+.audience-result {
+  margin-top: 2rem;
+  display: flex;
+  padding: 3.125rem 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  align-items: center;
+  background-color: white;
+}
+.audience-result__header {
+  color: #003f2d;
+}
+.audience-result__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.audience-result__img {
+  width: 3rem;
+  background-color: #F6FAF0;
+  border-radius: 10rem;
+  padding: 2rem;
+}
+.audience-result__link {
+  color: #54b848;
+  font-size: 1.5rem;
+  font-style: bold;
+}
+.audience-result__text {
+  padding: 1rem;
+  margin-top: -0.5rem;
+}
+.audience-result__student {
+  display: none;
+}
+.audience-result__retiree {
+  display: none;
+}
+.audience-result__canada {
+  display: none;
+}
+.audience-result__homeowner {
+  display: none;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;
@@ -307,11 +377,6 @@ body {
   font-weight: bold;
 }
 
-/*
-* {
-    border: 1px red solid;
-}
-*/
 .middle-section {
   margin-top: 5rem;
   padding-left: 1rem;
@@ -466,7 +531,7 @@ body {
   width: 100%;
   background-image: url("../../../assets/images/hero.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -725,15 +790,90 @@ body {
 
 .table-banner {
   display: flex;
-  padding: 128px 233px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .table-banner h3 {
-  color: red;
+  color: #757575;
+  font-size: 0.875rem;
+  font-weight: 700;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .table-banner h3 {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .table-banner h3 {
+    font-size: 1.25rem;
+  }
+}
+
+.table-banner h1 {
+  color: #1c1c1c;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .table-banner h1 {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .table-banner h1 {
+    font-size: 3rem;
+  }
+}
+
+.table-responsive-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  overflow-x: auto;
+}
+
+#responses-table {
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.response-table__head th {
+  color: white;
+  background-color: #038203;
+  text-align: left;
+  padding: 1rem;
+}
+
+#responses-table td {
+  padding: 1rem 2.5rem;
+  color: #1c1c1c;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+#responses-table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+#responses-table tr:hover {
+  background-color: #54b848;
+}
+
+#responses-table button {
+  background-color: #038203;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#responses-table button:hover {
+  background: #1c1c1c;
 }
 
 .signup-page {
