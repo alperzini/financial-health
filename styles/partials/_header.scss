@@ -7,7 +7,7 @@
     top: 0;
     padding: pxToRem(20);
     z-index: 1000;
-    background: $color-neutral-150;
+    background: $color-neutral-white;
     @include desktop {
         padding: pxToRem(20) pxToRem(120);
     }
@@ -15,6 +15,7 @@
     &__banner {
         padding-top: pxToRem(20);
         background-color: $color-tertiary-green;
+        position: relative;
         z-index: 1001;
     }
 
@@ -49,7 +50,7 @@
         left: 0;
         padding-top: pxToRem(110); 
         width: 100%;
-        background-color: $color-neutral-150; 
+        background-color: $color-neutral-white; 
         z-index: 100;
         display: flex;
         flex-direction: column;
@@ -93,7 +94,7 @@
             background-color: $color-neutral-100;
         }
         &:nth-child(even) {
-            background-color: $color-neutral-150;
+            background-color: $color-neutral-white;
         }
         @include desktop {
             text-align: left;
