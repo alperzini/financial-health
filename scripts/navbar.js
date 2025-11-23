@@ -35,17 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const navLinks = document.querySelectorAll('.primary-nav__link');
-    const currentPath = window.location.pathname;
+    const currentPageUrl = window.location.href.split(/[?#]/)[0];
 
     navLinks.forEach(function(link) {
-        const linkPath = link.getAttribute('href');
-        if (currentPath.includes(linkPath) || linkPath === currentPath) {
-            if (linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('index.html'))) {
-                link.classList.add('is-current-page');
-            }
-            else if (linkPath !== 'index.html') {
-                link.classList.add('is-current-page');
-            }
+        const tempAnchor = document.createElement('a');
+
+        tempAnchor.href = link.getAttribute('href');
+        
+        const resolvedLinkUrl = tempAnchor.href.split(/[?#]/)[0];
+        if (currentPageUrl === resolvedLinkUrl) {
+            link.classList.add('is-current-page');
         }
     });
 });
