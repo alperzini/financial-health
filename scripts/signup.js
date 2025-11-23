@@ -105,6 +105,10 @@ const formattedDate = today.toLocaleDateString("en-US");
         
     }
     postSignupData(newSignup);
+    
+    setTimeout(function() {
+        window.location.href = "../forms/confirmation.html";
+    }, 2000);
 })
 
 async function postSignupData(signupObject){
@@ -113,3 +117,9 @@ async function postSignupData(signupObject){
     console.log("POST data:", response.data);
 }
 
+
+//Store the Audience
+document.querySelector("form").addEventListener("submit", () => {
+    const audience = document.getElementById("audience").value;
+    localStorage.setItem("selectedAudience", audience); //Local Storage helps us to hold on the data for confirmation page
+});
