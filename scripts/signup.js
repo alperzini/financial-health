@@ -229,9 +229,9 @@ form.addEventListener("submit", function(event){
             firstName: event.target.firstName.value,
             lastName: event.target.lastName.value,
             email: event.target.email.value,
-            password: event.target.password.value,
-            audience: event.target.audience.value, 
-            income: event.target.income.value,
+            // password: event.target.password.value,
+            // audience: event.target.audience.value, 
+            // income: event.target.income.value,
         }
         postSignupData(newSignup);
     } else {
