@@ -49,9 +49,28 @@
 }
 
 #responses-table {
-    width: 80%;
+    width: 95%;
+    display: block;
     border-collapse: collapse;
     font-size: pxToRem(16);
+
+    @include tablet {
+        width: 80%;
+        display: table;
+    }
+
+    @include desktop {
+        width: 80%;
+        display: table;
+    }
+}
+
+.response-table__head {
+    display: none;
+
+    @include tablet {
+        display: table-header-group;
+    }
 }
 
 .response-table__head th {
@@ -62,9 +81,18 @@
 }
 
 #responses-table td {
-    padding: pxToRem(16) pxToRem(40);
+    display: block;
+    text-align: right;
+    padding: pxToRem(10) pxToRem(15);
     color: $color-neutral-900;
-    border-bottom: 1px solid $color-neutral-100;
+    border-bottom: 1px solid $color-neutral-900;
+
+    @include tablet {
+        display: table-cell;
+        text-align: left;
+        padding: pxToRem(16) pxToRem(40);
+        border-bottom: 1px solid $color-neutral-100;
+    }
 }
 
 #responses-table tr:nth-child(odd) {
