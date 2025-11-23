@@ -664,15 +664,90 @@ body {
 
 .table-banner {
   display: flex;
-  padding: 128px 233px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .table-banner h3 {
-  color: red;
+  color: #757575;
+  font-size: 0.875rem;
+  font-weight: 700;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .table-banner h3 {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .table-banner h3 {
+    font-size: 1.25rem;
+  }
+}
+
+.table-banner h1 {
+  color: #1c1c1c;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .table-banner h1 {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .table-banner h1 {
+    font-size: 3rem;
+  }
+}
+
+.table-responsive-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  overflow-x: auto;
+}
+
+#responses-table {
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.response-table__head th {
+  color: white;
+  background-color: #038203;
+  text-align: left;
+  padding: 1rem;
+}
+
+#responses-table td {
+  padding: 1rem 2.5rem;
+  color: #1c1c1c;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+#responses-table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+#responses-table tr:hover {
+  background-color: #54b848;
+}
+
+#responses-table button {
+  background-color: #038203;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#responses-table button:hover {
+  background: #1c1c1c;
 }
 
 .signup-page {

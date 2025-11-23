@@ -5,50 +5,50 @@ import { apiKey } from "../scripts/config.js";
 
 
 
-async function pullResponses () {
-    
+async function pullResponses() {
 
-const getRes = await axios.get(`https://industry-sprint-api-365b460ef11e.herokuapp.com/signups?api_key=${apiKey}`)
-  
+
+   const getRes = await axios.get(`https://industry-sprint-api-365b460ef11e.herokuapp.com/signups?api_key=${apiKey}`)
+
    return getRes.data
-  
+
 }
 //once the responses are organized, send them to responses.html
 document.addEventListener('DOMContentLoaded', async () => {
-    const data = await pullResponses()
-    displayResponses(data)
+   const data = await pullResponses()
+   displayResponses(data)
 })
 
 
- function displayResponses (data) {
-    const responseList = document.getElementById('responses-table__body')
-    console.log(data)
+function displayResponses(data) {
+   const responseList = document.getElementById('responses-table__body')
+   console.log(data)
 
-    data.forEach((element) => {
+   data.forEach((element) => {
 
-    const name = element.firstName
-   const lastName = element.lastName
-   const email = element.email
-   const id = element.id 
+      const name = element.firstName
+      const lastName = element.lastName
+      const email = element.email
+      const id = element.id
 
-        const row = document.createElement('tr')
-        row.id = id
+      const row = document.createElement('tr')
+      row.id = id
 
-        row.innerHTML = ` <td>${element.firstName}</td>
+      row.innerHTML = ` <td>${element.firstName}</td>
         <td>${element.lastName}</td>
         <td>${element.email}</td>
         <td><button onclick="window.location.href='mailto:${element.email}'">Contact</button></td>
         
         `;
-        
-     responseList.appendChild(row);
+
+      responseList.appendChild(row);
 
 
-        
-    })
+
+   })
 
 
-   
-    
+
+
 }
 
