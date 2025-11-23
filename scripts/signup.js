@@ -104,6 +104,10 @@ form.addEventListener("submit", function(event){
         
     }
     postSignupData(newSignup);
+    
+    setTimeout(function() {
+        window.location.href = "../forms/confirmation.html";
+    }, 2000);
 })
 
 async function postSignupData(signupObject){
@@ -118,3 +122,9 @@ function redirect(targetpage) {
   const currentPage = encodeURI(window.location.href);
   window.location.href = `${targetpage}?source=${currentPage}`;
 }
+
+//Store the Audience
+document.querySelector("form").addEventListener("submit", () => {
+    const audience = document.getElementById("audience").value;
+    localStorage.setItem("selectedAudience", audience); //Local Storage helps us to hold on the data for confirmation page
+});
