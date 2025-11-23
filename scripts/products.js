@@ -41,32 +41,34 @@ async function displayProducts(data) {
         const description = element.description.paragraph
         const bulletPoints = element.description.bulletPoints
 
-        const productContent = document.createElement('article')
-        productContent.id = id
-        productContent.classList.add('product')
+        const productArticle = document.createElement('article')
+        productArticle.id = id
+        productArticle.classList.add('product')
 
-        const productDiv = document.createElement('div')
-        productDiv.classList.add('product__content')
+         const productImage = document.createElement('img')
+        productImage.classList.add('product__image')
+        productArticle.appendChild(productImage)
+        productImage.src = image
+
+        const productContent = document.createElement('div')
+        productContent.classList.add('product__content')
         
 
         const title = document.createElement('h3')
         title.classList.add('product__title')
-        productDiv.appendChild(title)
+        productContent.appendChild(title)
         title.innerHTML = `${name}`
 
-        const productImage = document.createElement('img')
-        productImage.classList.add('product__image')
-        productDiv.appendChild(productImage)
-        productImage.src = image
+       
 
         const productDescription = document.createElement('p')
         productDescription.classList.add('product__details')
         productDescription.innerHTML = description
-        productDiv.appendChild(productDescription)
+        productContent.appendChild(productDescription)
 
         const productPoints = document.createElement('ul')
         productPoints.classList.add('product__points')
-        productDiv.appendChild(productPoints)
+        productContent.appendChild(productPoints)
 
         bulletPoints.forEach((element) => {
             
@@ -77,7 +79,7 @@ async function displayProducts(data) {
 
         const tags = document.createElement('div')
         tags.classList.add('product__tags')
-        productDiv.appendChild(tags)
+        productContent.appendChild(tags)
 
         const learnButton = document.createElement('button')
         tags.appendChild(learnButton)
@@ -90,8 +92,8 @@ async function displayProducts(data) {
         tags.appendChild(secondButton)
 
 
-        productContent.appendChild(productDiv)
-        productList.appendChild(productContent)
+        productArticle.appendChild(productContent)
+        productList.appendChild(productArticle)
        
     }
 
