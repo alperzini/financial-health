@@ -45,18 +45,23 @@ async function displayProducts(data) {
         productArticle.id = id
         productArticle.classList.add('product')
 
+        const productTextContentImage = document.createElement('div')
+        productTextContentImage.classList.add('product__content')
+        productArticle.appendChild(productTextContentImage)
+
+
          const productImage = document.createElement('img')
         productImage.classList.add('product__image')
-        productArticle.appendChild(productImage)
+        productTextContentImage.appendChild(productImage)
         productImage.src = image
 
-        const productContent = document.createElement('div')
-        productContent.classList.add('product__content')
+        const productTextContent = document.createElement('div')
+        productTextContent.classList.add('product__text-content')
         
 
         const title = document.createElement('h3')
         title.classList.add('product__title')
-        productContent.appendChild(title)
+        productTextContent.appendChild(title)
         title.innerHTML = `${name}`
 
        
@@ -64,11 +69,11 @@ async function displayProducts(data) {
         const productDescription = document.createElement('p')
         productDescription.classList.add('product__details')
         productDescription.innerHTML = description
-        productContent.appendChild(productDescription)
+        productTextContent.appendChild(productDescription)
 
         const productPoints = document.createElement('ul')
         productPoints.classList.add('product__points')
-        productContent.appendChild(productPoints)
+        productTextContent.appendChild(productPoints)
 
         bulletPoints.forEach((element) => {
             
@@ -79,7 +84,7 @@ async function displayProducts(data) {
 
         const tags = document.createElement('div')
         tags.classList.add('product__tags')
-        productContent.appendChild(tags)
+        productTextContent.appendChild(tags)
 
         const learnButton = document.createElement('button')
         tags.appendChild(learnButton)
@@ -92,7 +97,7 @@ async function displayProducts(data) {
         tags.appendChild(secondButton)
 
 
-        productArticle.appendChild(productContent)
+        productArticle.appendChild(productTextContent)
         productList.appendChild(productArticle)
        
     }
