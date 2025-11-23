@@ -12,6 +12,12 @@
         padding: pxToRem(20) pxToRem(120);
     }
 
+    &__banner {
+        padding-top: pxToRem(20);
+        background-color: $color-tertiary-green;
+        z-index: 1001;
+    }
+
     &__logo {
         z-index: 1000;
         img {
@@ -41,8 +47,7 @@
         position: fixed; 
         top: 0; 
         left: 0;
-        padding-top: pxToRem(100); 
-        padding-bottom: pxToRem(20);
+        padding-top: pxToRem(110); 
         width: 100%;
         background-color: $color-neutral-150; 
         z-index: 100;
@@ -69,7 +74,7 @@
         display: flex;
         flex-direction: column;
         margin: 0;
-        padding: 0 pxToRem(40); 
+        padding: 0; 
         gap: pxToRem(5);
         @include tablet {
             gap: pxToRem(10);
@@ -83,10 +88,19 @@
     }
     &__item {
         text-align: center;
+        padding: pxToRem(10) 0;
+        &:nth-child(odd) {
+            background-color: $color-neutral-100;
+        }
+        &:nth-child(even) {
+            background-color: $color-neutral-150;
+        }
         @include desktop {
-            border-bottom: none;
-            padding: 0;
             text-align: left;
+            &:nth-child(odd),
+            &:nth-child(even) {
+                background-color: transparent;
+            }
         }
     }
     &__link {
