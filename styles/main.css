@@ -836,9 +836,31 @@ body {
 }
 
 #responses-table {
-  width: 80%;
+  width: 95%;
+  display: block;
   border-collapse: collapse;
   font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  #responses-table {
+    width: 80%;
+    display: table;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #responses-table {
+    width: 80%;
+    display: table;
+  }
+}
+
+.response-table__head {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .response-table__head {
+    display: table-header-group;
+  }
 }
 
 .response-table__head th {
@@ -849,9 +871,19 @@ body {
 }
 
 #responses-table td {
-  padding: 1rem 2.5rem;
+  display: block;
+  text-align: right;
+  padding: 0.625rem 0.9375rem;
   color: #1c1c1c;
-  border-bottom: 1px solid #f9f9f9;
+  border-bottom: 1px solid #1c1c1c;
+}
+@media screen and (min-width: 768px) {
+  #responses-table td {
+    display: table-cell;
+    text-align: left;
+    padding: 1rem 2.5rem;
+    border-bottom: 1px solid #f9f9f9;
+  }
 }
 
 #responses-table tr:nth-child(odd) {
