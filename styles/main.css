@@ -31,31 +31,37 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
   gap: 1rem;
 }
-.button-group__signup-link {
-  font-style: none;
-  text-decoration: none;
-}
-.button-group__signup-link__button {
+.button-group .button {
+  display: inline-block;
   padding: 0.8rem 1rem;
   border-radius: 0.4rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid transparent;
+  font-weight: 500;
+}
+.button-group .button--signup {
   background-color: #038203;
-  color: azure;
-  border: #038203 1px solid;
+  border-color: #038203;
+  color: white;
 }
-.button-group__learnmore-link {
-  font-style: none;
-  text-decoration: none;
+.button-group .button--signup:hover {
+  background-color: #026602;
+  color: white;
 }
-.button-group__learnmore-link__button {
-  padding: 0.8rem 1rem;
-  border-radius: 0.4rem;
+.button-group .button--learnmore {
   background-color: #fff;
+  border-color: #ffffff;
   color: black;
-  border: #fff 1px solid;
   font-weight: bold;
+}
+.button-group .button--learnmore:hover {
+  background-color: #e6e6e6;
+  color: black;
 }
 
 .site-footer {
