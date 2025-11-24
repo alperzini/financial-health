@@ -115,3 +115,27 @@
 #responses-table button:hover {
     background: $color-neutral-900;
 }
+
+.google-sheet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    &__button {
+        align-self: center;
+        align-content: center;
+        margin-bottom: 1rem;
+        padding: 0.8rem 1rem;
+        border-radius: 0.4rem;
+        background-color: #038203;
+        color: azure;
+        border: #038203 1px solid;
+
+        &:hover {
+            background-color: #026602;
+            color: white;
+        }
+    }
+}
