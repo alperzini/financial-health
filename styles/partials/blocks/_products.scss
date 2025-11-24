@@ -182,97 +182,99 @@
             text-align: left;
             margin-bottom: pxToRem(80);
         }
+    }
 
-        /* Alternating Layout Logic: ONLY applies on desktop */
-        &:nth-child(even) {
+        &:nth-child(odd) {
             @include desktop {
-                flex-direction: row-reverse;
+                & .product__content {
+                    flex-direction: row-reverse;
+                }
             }
         }
-    }
+    
 
-    &__title {
+        &__title {
 
-        font-size: pxToRem(24);
-        font-weight: 700;
-        color: $color-neutral-900;
+            font-size: pxToRem(24);
+            font-weight: 700;
+            color: $color-neutral-900;
 
-        @include tablet {
-            font-size: pxToRem(28);
+            @include tablet {
+                font-size: pxToRem(28);
+            }
+
+            @include desktop {
+                font-size: (32);
+            }
         }
 
-        @include desktop {
-            font-size: (32);
-        }
-    }
+        &__details {
 
-    &__details {
+            font-size: pxToRem(16);
+            font-weight: 400;
+            color: $color-neutral-300;
 
-        font-size: pxToRem(16);
-        font-weight: 400;
-        color: $color-neutral-300;
+            @include tablet {
+                font-size: pxToRem(18);
+            }
 
-        @include tablet {
-            font-size: pxToRem(18);
-        }
-
-        @include desktop {
-            font-size: pxToRem(20);
-        }
-    }
-
-    &__points {
-
-        font-size: pxToRem(16);
-        font-weight: 400;
-        color: $color-neutral-300;
-
-        @include tablet {
-            font-size: pxToRem(18);
+            @include desktop {
+                font-size: pxToRem(20);
+            }
         }
 
-        @include desktop {
-            font-size: pxToRem(20);
+        &__points {
+
+            font-size: pxToRem(16);
+            font-weight: 400;
+            color: $color-neutral-300;
+
+            @include tablet {
+                font-size: pxToRem(18);
+            }
+
+            @include desktop {
+                font-size: pxToRem(20);
+            }
         }
-    }
 
-    &__tags {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin: 30px auto;
-
-        @include tablet {
+        &__tags {
+            display: flex;
             flex-direction: column;
-        }
+            align-items: center;
+            gap: 15px;
+            margin: 30px auto;
 
-        @include desktop {
-            flex-direction: row;
-        }
+            @include tablet {
+                flex-direction: column;
+            }
 
-        button {
-            background-color: $color-tertiary-green;
-            color: white;
-            border-color: $color-tertiary-green;
-            padding: 12px 30px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            outline: none;
-            border-width: 2px;
-            border-style: solid;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
+            @include desktop {
+                flex-direction: row;
+            }
 
-        .cta-button {
-            background-color: white;
-            color: $color-tertiary-green;
-            border-color: $color-tertiary-green;
+            button {
+                background-color: $color-tertiary-green;
+                color: white;
+                border-color: $color-tertiary-green;
+                padding: 12px 30px;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                outline: none;
+                border-width: 2px;
+                border-style: solid;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
 
-            &:hover {
-                background-color: $color-neutral-150;
+            .cta-button {
+                background-color: white;
+                color: $color-tertiary-green;
+                border-color: $color-tertiary-green;
+
+                &:hover {
+                    background-color: $color-neutral-150;
+                }
             }
         }
     }
-}
