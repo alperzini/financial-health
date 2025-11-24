@@ -359,11 +359,12 @@ body {
 }
 .confirmation-page__hero {
   color: white;
+  padding: 0.625rem 1.25rem;
 }
 .confirmation-page__container {
   background-color: white;
   display: flex;
-  padding: 1.5rem 1.875rem;
+  padding: 3.125rem 1.25rem;
   margin: 1.25rem;
   flex-direction: column;
   justify-content: center;
@@ -374,11 +375,18 @@ body {
   .confirmation-page__container {
     align-self: center;
     padding: 3.125rem 1.875rem;
-    margin: 3rem;
   }
 }
 .confirmation-page__title {
   color: #003f2d;
+}
+.confirmation-page__description-container {
+  padding: 1.25rem 3.75rem;
+}
+@media screen and (min-width: 1200px) {
+  .confirmation-page__description-container {
+    padding: 1.25rem 5.3125rem;
+  }
 }
 
 .icon__checkmark {

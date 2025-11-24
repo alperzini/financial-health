@@ -13,12 +13,13 @@
 
     &__hero {
         color: $color-neutral-white;
+        padding: pxToRem(10) pxToRem(20);
     }
 
     &__container {
         background-color: $color-neutral-white;
         display: flex;
-        padding: pxToRem(24) pxToRem(30);
+        padding: pxToRem(50) pxToRem(20);
         margin: pxToRem(20);
         flex-direction: column;
         justify-content: center;
@@ -28,12 +29,18 @@
         @include tablet {
             align-self: center;
             padding: pxToRem(50) pxToRem(30);
-            margin:pxToRem(48);
         }
     }
 
     &__title {
         color: $color-secondary-green;
+    }
+
+    &__description-container {
+        padding: pxToRem(20) pxToRem(60);
+        @include desktop {
+            padding: pxToRem(20) pxToRem(85);
+        }
     }
 }
 
