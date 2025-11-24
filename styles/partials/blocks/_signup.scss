@@ -6,7 +6,6 @@
 .signup-page {
     background-color: $color-tertiary-green;
     display: flex;
-    // padding: 128px 233px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -15,11 +14,25 @@
     &__container {
         color: $color-neutral-white;
         text-align: center;
+        padding: pxToRem(20) pxToRem(40);
+        @include tablet {
+            padding: pxToRem(40) pxToRem(120);
+        }
     }
-    
+    &__title-container {
+        @include tablet {
+            padding: 0 pxToRem(20);
+        }
+    }
+    &__description-container {
+        @include tablet {
+            padding: 0 pxToRem(80);
+        }
+    }
 }
 
 .signup-form {
+    margin-bottom: pxToRem(40);
     &__container {
         background-color: $color-neutral-white;
         display: flex;
@@ -27,8 +40,9 @@
         flex-direction: column;
         justify-content: center;
         align-self: stretch;
-        gap: 26px;
+        gap: 15px;
         @include tablet {
+            width: auto;
             padding: pxToRem(50) pxToRem(100);
         }
         @include desktop {
@@ -55,6 +69,7 @@
         }
         .signup-form__error-message {
             display: block; 
+            font-size: small;
         }
     }
 
@@ -74,13 +89,19 @@
     &__input,
     &__input-wrapper select {
         display: flex;
-        padding: 12px;
         justify-content: space-between;
         align-items: center;
+        padding: pxToRem(12);
         border: 1px solid $color-neutral-200;
         background: $color-neutral-white;
         box-sizing: border-box;
         width: 100%;
+        @include tablet {
+            width: pxToRem(344);
+        }
+        @include desktop {
+            width: pxToRem(500);
+        }
 
         &:hover {
             border: 1px solid $color-tertiary-green;
@@ -100,6 +121,28 @@
             display: none;
             margin-top: pxToRem(4); 
         }
+    }
+
+    &__input-label {
+        font-size: small;
+    }
+
+    &__security-wrapper {
+        display: flex;
+        font-size: small;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__security-icon {
+        width: pxToRem(40);
+    }
+    &__security-link {
+        text-decoration: none;
+        color: $color-tertiary-green;
     }
 }
 

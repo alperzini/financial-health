@@ -182,6 +182,7 @@ const apiUrl = "https://industry-sprint-api-365b460ef11e.herokuapp.com";
 console.log(apiKey)
 const form = document.querySelector(".signup-form__container");
 let formFields = [];
+const submitButton = document.getElementById("submit");
 
 function attachValidationListeners() {
     formFields = Array.from(form.querySelectorAll('input, select'));
@@ -207,44 +208,6 @@ function attachValidationListeners() {
     });
 }
 
-form.addEventListener("submit", function(event){
-    event.preventDefault();
-
-    let formValid = true;
-
-    formFields.forEach(function(field) {
-        const fieldIsValid = validateField(field);
-        if (!fieldIsValid) {
-            formValid = false;
-        }
-    });
-
-    const passwordsMatch = validatePasswordMatch(form);
-    if (!passwordsMatch) {
-        formValid = false;
-    }
-
-
-
-
-
-
-    if (formValid) {
-        const newSignup = {
-            firstName: event.target.firstName.value,
-            lastName: event.target.lastName.value,
-            email: event.target.email.value,
-        }
-        postSignupData(newSignup);
-    } else {
-        console.log("Unable to submit. Please fill out all required fields.");
-        const firstError = form.querySelector('.signup-form__input-wrapper.error');
-        if (firstError) {
-            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-});
-
 async function postSignupData(signupObject){
     console.log(signupObject);
     const response = await axios.post(`${apiUrl}/signups?api_key=${apiKey}`, signupObject)
@@ -258,45 +221,69 @@ function redirect(targetpage) {
     window.location.href = `${targetpage}?source=${currentPage}`;
 }
 
+form.addEventListener("submit", async function(event){ 
+    event.preventDefault();
 
-//alper new code injection  
+    let formValid = true;
 
-
-
-
-const formGoogle = document.querySelector(".signup-form__container");
-formGoogle.addEventListener("submit", async function (event) {
-  event.preventDefault();
- 
-  const formData = {
-    firstName: event.target.firstName.value,
-    lastName: event.target.lastName.value,
-    email: event.target.email.value,
-    audience: document.getElementById("audience").value,
-    income: document.getElementById("income").value,
-    password: event.target.password.value // remove if not needed
-  };
-  console.log("Sending form data to Google Sheets:", formData);
-
-  const googleScriptURL = 'https://script.google.com/macros/s/AKfycby5MQU7HTydnb7iyNv1nkKqKWroOZzuFZZ9KDn45hCNktBPM0_vDfhmA6dE8nRslOI/exec'
-  try {
-    // Send to Google Sheets
-
-    await fetch(googleScriptURL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
+    formFields.forEach(function(field) {
+        if (!validateField(field)) { 
+            formValid = false;
+        }
     });
-    
-   
-    // Save audience locally for confirmation page
-    localStorage.setItem("selectedAudience", formData.audience);
-    // Redirect after success
-    setTimeout(() => {
-      redirect('confirmation.html')
-    }, 1500);
-  } catch (error) {
-    console.error("Google Sheets submission failed:", error);
-  }
+
+    const passwordsMatch = validatePasswordMatch(form);
+    if (!passwordsMatch) {
+        formValid = false;
+    }
+
+    if (formValid) {
+        const formData = {
+            firstName: event.target.firstName.value,
+            lastName: event.target.lastName.value,
+            email: event.target.email.value,
+            audience: document.getElementById("audience").value,
+            income: document.getElementById("income").value,
+            password: event.target.password.value 
+        };
+        
+        if (submitButton) {
+            submitButton.textContent = 'Redirecting...';
+        }
+        
+        try {
+            const newSignup = {
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+            }
+            await postSignupData(newSignup); 
+
+            const googleScriptURL = 'https://script.google.com/macros/s/AKfycby5MQU7HTydnb7iyNv1nkKqKWroOZzuFZZ9KDn45hCNktBPM0_vDfhmA6dE8nRslOI/exec'
+            await fetch(googleScriptURL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            localStorage.setItem("selectedAudience", formData.audience);
+            setTimeout(() => {
+                redirect('confirmation.html')
+            }, 1500);
+
+        } catch (error) {
+            console.error("Submission failed:", error);
+            if (submitButton) {
+                submitButton.textContent = 'Sign Up';
+            }
+        }
+
+    } else {
+        console.log("Unable to submit. Please fill out all required fields.");
+        const firstError = form.querySelector('.signup-form__input-wrapper.error');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
 });
