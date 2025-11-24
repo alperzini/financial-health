@@ -984,6 +984,29 @@ body {
   background: #1c1c1c;
 }
 
+.google-sheet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.google-sheet__button {
+  align-self: center;
+  align-content: center;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #038203;
+  color: azure;
+  border: #038203 1px solid;
+}
+.google-sheet__button:hover {
+  background-color: #026602;
+  color: white;
+}
+
 .signup-page {
   background-color: #038203;
   display: flex;
