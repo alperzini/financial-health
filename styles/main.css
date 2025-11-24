@@ -759,7 +759,6 @@ body {
   flex-direction: column;
   margin-bottom: 3rem;
   width: 100%;
-  /* Alternating Layout Logic: ONLY applies on desktop */
 }
 @media screen and (min-width: 768px) {
   .product__content {
@@ -775,7 +774,7 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .product__content:nth-child(even) {
+  .product:nth-child(odd) .product__content {
     flex-direction: row-reverse;
   }
 }

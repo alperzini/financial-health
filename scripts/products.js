@@ -105,13 +105,21 @@ async function displayProducts(data) {
 
     const financialPulseButton = document.getElementById('R3K9LT-btn')
     financialPulseButton.textContent = "Reveal your Financial Health Score"
+    financialPulseButton.addEventListener("click", () => {
+        window.location.href = "./forms/signup.html";
+    });
 
     const finanicalHealthButton = document.getElementById('M8F2QY-btn')
     finanicalHealthButton.textContent = 'Get smart budget alerts instantly'
+    finanicalHealthButton.addEventListener("click", () => {
+        window.location.href = "./forms/signup.html"
+    });
 
     const smartAlertsButton = document.getElementById('B9X3JE-btn')
     smartAlertsButton.textContent = 'See your personalized financial roadmap'
-
+     smartAlertsButton.addEventListener("click", () => {
+        window.location.href = "./forms/signup.html"
+    });
 
 }
 
