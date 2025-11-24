@@ -10,37 +10,31 @@
     align-items: center;
     text-align: center;
     gap: 10px;
+    padding: pxToRem(24) pxToRem(30);
 
     &__hero {
         color: $color-neutral-white;
-        padding: pxToRem(10) pxToRem(20);
     }
 
     &__container {
         background-color: $color-neutral-white;
         display: flex;
-        padding: pxToRem(50) pxToRem(20);
-        margin: pxToRem(20);
         flex-direction: column;
         justify-content: center;
         align-self: stretch;
-        gap: 26px;
-
-        @include tablet {
-            align-self: center;
-            padding: pxToRem(50) pxToRem(30);
-        }
+        gap: 1rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     &__title {
         color: $color-secondary-green;
     }
-
-    &__description-container {
-        padding: pxToRem(20) pxToRem(60);
-        @include desktop {
-            padding: pxToRem(20) pxToRem(85);
-        }
+    @include tablet {
+        align-self: center;
+        padding: pxToRem(50) pxToRem(30);
     }
 }
 
@@ -51,18 +45,15 @@
 }
 
 .audience-result {
-    margin: 2rem;
+    background-color: $color-neutral-white;
     display: flex;
-    padding: pxToRem(50) pxToRem(20);
     flex-direction: column;
     justify-content: center;
     align-self: stretch;
-    align-items: center;
-    background-color: $color-neutral-white;
-
-    @include tablet {
-        align-self: center;
-    }
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    border: 5px greenyellow solid;
 
     &__header {
         color: $color-secondary-green
@@ -93,6 +84,8 @@
     &__text {
         padding: 1rem;
         margin-top: -0.5rem;
+        width: 75%;
+
     }
 
     &__student {
@@ -110,5 +103,5 @@
     &__homeowner {
         display: none;
     }
-
+    
 }
