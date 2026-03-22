@@ -1,4 +1,4 @@
-# Financial Health - Frontend
+# Financial Health
 This is the frontend of the TD Financial Health application — a conceptual personal finance application designed to provide a health check for your wallet through personalized insights, tools, and guidance. Developed as part of a BrainStation Industry Project.
 
 **URL**: (Local Environment)
@@ -38,7 +38,7 @@ industry-sprint-1/
 ### Installation
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/alperzini/financial-health.git
 ```
 2. Navigate to the project directory
 ```bash
