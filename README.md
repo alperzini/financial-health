@@ -1,7 +1,7 @@
 # Financial Health
 This is the frontend of the TD Financial Health application — a conceptual personal finance application designed to provide a health check for your wallet through personalized insights, tools, and guidance. Developed as part of a BrainStation Industry Project.
 
-**URL**: https://industry-sprint-1.vercel.app/
+**URL**: https://financial-health-taupe.vercel.app/
 
 Built with HTML5, CSS3, SCSS, Axios and Vanilla JavaScript.
 
