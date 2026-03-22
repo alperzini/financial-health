@@ -1,17 +1,18 @@
-# TD Financial Health - Frontend
-This is the frontend of the TD Financial Health application — a conceptual personal finance application designed to provide a health check for your wallet through personalized insights, tools, and guidance. Developed as part of a BrainStation Industry Project with TD.
+# Financial Health - Frontend
+This is the frontend of the TD Financial Health application — a conceptual personal finance application designed to provide a health check for your wallet through personalized insights, tools, and guidance. Developed as part of a BrainStation Industry Project.
 
 **URL**: (Local Environment)
 
-Built with HTML5, CSS3, and Vanilla JavaScript.
+Built with HTML5, CSS3, SCSS, Axios and Vanilla JavaScript.
 
 ## Features
 - Landing page with financial health feature highlights
-- Signup flow for TD Financial Health Beta
+- Signup flow for TD Financial Health 
 - Products and Features showcase
 - Form validation and dynamic response handling
 - Administrator Responses View
 - Fully responsive design layout
+- Google Sheet - Form Validation Automation
 
 ## Tech Stack
 - HTML5 for semantic structure
