@@ -22,12 +22,19 @@ Built with HTML5, CSS3, SCSS, Axios and Vanilla JavaScript.
 
 ## Project Structure
 industry-sprint-1/
+
 assets/      # Images, logos, icons (TD logos, social icons, etc.)
+
 pages/       # HTML pages (products, forms/signup, admin view)
+
 scripts/     # Modular JavaScript logic (config, form handling, nav)
+
 styles/      # CSS stylesheets for global and component styles
+
 index.html   # Main application landing page
+
 README.md    # Project documentation
+
 
 ## Getting Started
 
